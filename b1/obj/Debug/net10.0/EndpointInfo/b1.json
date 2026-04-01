@@ -270,17 +270,26 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/TodoItem"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ToDoGetDto"
+                  }
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TodoItem"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ToDoGetDto"
+                  }
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TodoItem"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ToDoGetDto"
+                  }
                 }
               }
             }
@@ -296,7 +305,30 @@
         "summary": "hiển thị danh sách theo trang",
         "parameters": [
           {
-            "name": "pageNumber",
+            "name": "search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "id"
+            }
+          },
+          {
+            "name": "isDesc",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "page",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -305,7 +337,7 @@
             }
           },
           {
-            "name": "pageSize",
+            "name": "size",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -343,6 +375,39 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/seed-pro": {
+      "post": {
+        "tags": [
+          "ToDo"
+        ],
+        "summary": "test nhiều dữ liệu",
+        "parameters": [
+          {
+            "name": "count",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            }
+          },
+          {
+            "name": "categoryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }

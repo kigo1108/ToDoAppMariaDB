@@ -8,7 +8,7 @@ namespace b1.ToDo
     {
         private readonly AppDbContext _appDbContext;
         private readonly ICategoryService _categoryService;
-        public TodoService(AppDbContext appDbContext,ICategoryService category)
+        public TodoService(AppDbContext appDbContext, ICategoryService category)
         {
             _appDbContext = appDbContext;
             _categoryService = category;
@@ -28,7 +28,7 @@ namespace b1.ToDo
         public async Task<TodoItem?> FindById(int Id)
         {
             var todoItem = await _appDbContext.TodoItems.FindAsync(Id);
-            if(todoItem == null)
+            if (todoItem == null)
             {
                 return null;
             }
@@ -38,7 +38,7 @@ namespace b1.ToDo
         public async Task DeleteToDo(int Id)
         {
             var todo = await FindById(Id);
-            if(todo == null)
+            if (todo == null)
             {
                 return;
             }
@@ -67,7 +67,7 @@ namespace b1.ToDo
         public async Task MarkComple(int Id)
         {
             var todo = await FindById(Id);
-            if(todo == null)
+            if (todo == null)
             {
                 return;
             }
@@ -86,19 +86,52 @@ namespace b1.ToDo
             return await MapTodoToDto(query).SingleOrDefaultAsync() ?? throw new ArgumentException($"Không tìm thấy ToDo với ID {id}");
         }
 
-        public async Task<List<ToDoGetDto>> GetPagedTodosAsync(int pageNumber, int pageSize)
+        //public async Task<List<ToDoGetDto>> GetPagedTodosAsync(int pageNumber, int pageSize)
+        //{
+        //    if (pageNumber < 1)
+        //    {
+        //        pageNumber = 1;
+        //    }
+        //    var query = _appDbContext.TodoItems.AsQueryable();
+        //    var dtoQuery = MapTodoToDto(query);
+        //    return await dtoQuery
+        //        .Skip((pageNumber - 1) * pageSize)
+        //        .Take(pageSize)
+        //        .ToListAsync();
+        //}
+
+        public async Task<List<ToDoGetDto>> GetPagedTodosAsync(string? searchTerm, string? sortBy, bool isDescending, int pageNumber, int pageSize)
         {
-            if (pageNumber < 1)
-            {
-                pageNumber = 1;
-            }
             var query = _appDbContext.TodoItems.AsQueryable();
+
+            // 1. Tìm kiếm (Search)
+            if (!string.IsNullOrWhiteSpace(searchTerm))
+            {
+                // Sử dụng utf8mb4_bin để so sánh chính xác từng byte (phân biệt dấu và hoa thường)
+                query = query.Where(t =>
+                    EF.Functions.Like(EF.Functions.Collate(t.Title, "utf8mb4_bin"), $"%{searchTerm}%") ||
+                    EF.Functions.Like(EF.Functions.Collate(t.Category.NameCategory, "utf8mb4_bin"), $"%{searchTerm}%")
+                );
+            }
+            // 2. Sắp xếp (Sort)
+            if (!string.IsNullOrWhiteSpace(sortBy))
+            {
+                query = sortBy.ToLower() switch
+                {
+                    "title" => isDescending ? query.OrderByDescending(t => t.Title) : query.OrderBy(t => t.Title),
+                    "id" => isDescending ? query.OrderByDescending(t => t.Id) : query.OrderBy(t => t.Id),
+                    _ => query.OrderBy(t => t.Id) // Mặc định sắp xếp theo Id
+                };
+            }
+
+            // 3. Áp dụng khuôn DTO và Phân trang (Tận dụng hàm Map đã có của Nam)
             var dtoQuery = MapTodoToDto(query);
+
             return await dtoQuery
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
         }
-        }
     }
+}
 

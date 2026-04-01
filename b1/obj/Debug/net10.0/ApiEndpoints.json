@@ -62,7 +62,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "b1.Models.TodoItem",
+        "Type": "System.Collections.Generic.List\u00601[[b1.DTOs.ToDoGetDto, b1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -142,19 +142,34 @@
   },
   {
     "ContainingType": "b1.Controllers.ToDoController",
-    "Method": "GetPaginated",
+    "Method": "GetPaged",
     "RelativePath": "pagination",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pageNumber",
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isDesc",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
         "Type": "System.Int32",
         "IsRequired": false
       },
       {
-        "Name": "pageSize",
+        "Name": "size",
         "Type": "System.Int32",
         "IsRequired": false
       }
@@ -170,6 +185,27 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "b1.Controllers.ToDoController",
+    "Method": "SeedPro",
+    "RelativePath": "seed-pro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "count",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "categoryId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "b1.Controllers.ToDoController",

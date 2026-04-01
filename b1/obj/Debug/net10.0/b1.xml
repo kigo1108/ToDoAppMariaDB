@@ -58,9 +58,14 @@
             lọc cac công việc theo danh mục
             </summary>
         </member>
-        <member name="M:b1.Controllers.ToDoController.GetPaginated(System.Int32,System.Int32)">
+        <member name="M:b1.Controllers.ToDoController.GetPaged(System.String,System.String,System.Boolean,System.Int32,System.Int32)">
             <summary>
             hiển thị danh sách theo trang
+            </summary>
+        </member>
+        <member name="M:b1.Controllers.ToDoController.SeedPro(System.Int32,System.Int32)">
+            <summary>
+            test nhiều dữ liệu
             </summary>
         </member>
         <member name="M:b1.Controllers.WeatherForecastController.GetTodos">

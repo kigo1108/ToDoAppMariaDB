@@ -11,7 +11,13 @@ namespace b1.ToDo
         Task<ToDoGetDto> FinByIdDtoAsync(int Id);
         Task<List<ToDoGetDto>> GetAllTodosDtoAsync(); // Trả về DTO
         Task<List<ToDoGetDto>> GetByCategoryIdDtoAsync(int categoryId); // Trả về DTO
-        //phân trang
-        Task<List<ToDoGetDto>> GetPagedTodosAsync(int pageNumber, int pageSize);
+
+        //xắp xếp, phân trang, tìm kiếm 
+        Task<List<ToDoGetDto>> GetPagedTodosAsync(
+        string? searchTerm,
+        string? sortBy,
+        bool isDescending,
+        int pageNumber,
+        int pageSize);
     }
 }

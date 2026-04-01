@@ -91,7 +91,7 @@ namespace b1.Controllers
         ///lọc cac công việc theo danh mục
         ///</summary>
         [HttpGet("category")]
-        public async Task<ActionResult<TodoItem>> GetByCategorybyId(int categoryId)
+        public async Task<ActionResult<List<ToDoGetDto>>> GetByCategorybyId(int categoryId)
         {
             var items = await _itodoService.GetByCategoryIdDtoAsync(categoryId);
             if (items == null || items.Count == 0)
@@ -104,10 +104,35 @@ namespace b1.Controllers
         /// hiển thị danh sách theo trang
         /// </summary>
         [HttpGet("pagination")]
-        public async Task<ActionResult<List<ToDoGetDto>>> GetPaginated(int pageNumber=1, int pageSize=10)
+        public async Task<ActionResult<List<ToDoGetDto>>> GetPaged(
+            [FromQuery] string? search,
+            [FromQuery] string? sortBy = "id",
+            [FromQuery] bool isDesc = false,
+            [FromQuery] int page = 1,
+            [FromQuery] int size = 10)
         {
-            var pagedItems = await _itodoService.GetPagedTodosAsync(pageNumber, pageSize);
-            return Ok(pagedItems);
+            var items = await _itodoService.GetPagedTodosAsync(search, sortBy, isDesc, page, size);
+            return Ok(items);
+        }
+
+        ///<summary>
+        ///test nhiều dữ liệu
+        ///</summary>
+        [HttpPost("seed-pro")]
+        public async Task<IActionResult> SeedPro(int count = 50, int categoryId = 1)
+        {
+            var faker = new Bogus.Faker<TodoItem>()
+                .RuleFor(t => t.Title, f => f.Lorem.Sentence(3)) // Tạo câu 3 từ ngẫu nhiên
+                .RuleFor(t => t.IsCompleted, f => f.Random.Bool()) // Random đúng/sai
+                .RuleFor(t => t.CategoryId, categoryId)
+;
+
+            var items = faker.Generate(count); // Tạo ra 50 đối tượng
+
+            _appDbContext.TodoItems.AddRange(items);
+            await _appDbContext.SaveChangesAsync();
+
+            return Ok($"Đã bơm {count} dữ liệu 'như thật' vào Database!");
         }
     }
 }
