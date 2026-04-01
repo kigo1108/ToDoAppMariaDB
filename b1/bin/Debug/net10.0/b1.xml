@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>b1</name>
+    </assembly>
+    <members>
+        <member name="M:b1.Controllers.CategoryController.AddCategory(System.String)">
+            <summary>
+            Them danh muc moi vao danh sach cac danh muc
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:b1.Controllers.CategoryController.DeleteCategory(System.Int32)">
+            <summary>
+            Xóa Category theo Id
+            </summary>
+        </member>
+        <member name="M:b1.Controllers.CategoryController.GetAllCategory">
+            <summary>
+            hiển thị tất cả danh sách catergory
+            </summary>
+        </member>
+        <member name="M:b1.Controllers.ToDoController.AddTodo(b1.DTOs.TodoCreateDto)">
+            <summary>
+            Them cong viec moi vao danh sach viec can lam
+            </summary>s
+            <returns></returns>
+        </member>
+        <member name="M:b1.Controllers.ToDoController.GetallToDo">
+            <summary>
+            Hien thi danh sach tat ca cong viec can lam
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:b1.Controllers.ToDoController.UpdateToDo(System.Int32)">
+            <summary>
+            danh dau cong viec da lam xong theo Id
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:b1.Controllers.ToDoController.DeleteToDo(System.Int32)">
+            <summary>
+            Xoa cong viec khoi danh sach theo Id
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:b1.Controllers.ToDoController.GetById(System.Int32)">
+            <summary>
+            tìm kiếm theo id công việc
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:b1.Controllers.ToDoController.GetByCategorybyId(System.Int32)">
+             <summary>
+            lọc cac công việc theo danh mục
+            </summary>
+        </member>
+        <member name="M:b1.Controllers.ToDoController.GetPaginated(System.Int32,System.Int32)">
+            <summary>
+            hiển thị danh sách theo trang
+            </summary>
+        </member>
+        <member name="M:b1.Controllers.WeatherForecastController.GetTodos">
+            <summary>
+            API lấy danh sách việc cần làm của Nam
+            </summary>
+        </member>
+        <member name="M:b1.Controllers.WeatherForecastController.Hello(System.String)">
+            <summary>
+            API tra ve hello
+            </summary>
+        </member>
+        <member name="M:b1.Controllers.WeatherForecastController.AddTodo(System.String)">
+            <summary>
+            Api them cong viec moi vao danh sach
+            </summary>
+            <param name="todoName">Ten cong viec can them</param>
+        </member>
+        <member name="T:b1.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:b1.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:b1.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:b1.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:b1.Migrations.AddCategory">
+            <inheritdoc />
+        </member>
+        <member name="M:b1.Migrations.AddCategory.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:b1.Migrations.AddCategory.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:b1.Migrations.AddCategory.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:b1.Migrations.AddUpdateSoftDeleteLogic">
+            <inheritdoc />
+        </member>
+        <member name="M:b1.Migrations.AddUpdateSoftDeleteLogic.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:b1.Migrations.AddUpdateSoftDeleteLogic.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:b1.Migrations.AddUpdateSoftDeleteLogic.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type)">
+            <summary>
+            Generates a documentation comment ID for a type.
+            Example: T:Namespace.Outer+Inner`1 becomes T:Namespace.Outer.Inner`1
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Reflection.PropertyInfo)">
+            <summary>
+            Generates a documentation comment ID for a property.
+            Example: P:Namespace.ContainingType.PropertyName or for an indexer P:Namespace.ContainingType.Item(System.Int32)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type,System.String)">
+            <summary>
+            Generates a documentation comment ID for a property given its container type and property name.
+            Example: P:Namespace.ContainingType.PropertyName
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Reflection.MethodInfo)">
+            <summary>
+            Generates a documentation comment ID for a method (or constructor).
+            For example:
+              M:Namespace.ContainingType.MethodName(ParamType1,ParamType2)~ReturnType
+              M:Namespace.ContainingType.#ctor(ParamType)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.GetTypeDocId(System.Type,System.Boolean,System.Boolean)">
+            <summary>
+            Generates a documentation ID string for a type.
+            This method handles nested types (replacing '+' with '.'),
+            generic types, arrays, pointers, by-ref types, and generic parameters.
+            The <paramref name="includeGenericArguments"/> flag controls whether
+            constructed generic type arguments are emitted, while <paramref name="omitGenericArity"/>
+            controls whether the generic arity marker (e.g. "`1") is appended.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.NormalizeDocId(System.String)">
+            <summary>
+            Normalizes a documentation comment ID to match the compiler-style format.
+            Strips the return type suffix for ordinary methods but retains it for conversion operators.
+            </summary>
+            <param name="docId">The documentation comment ID to normalize.</param>
+            <returns>The normalized documentation comment ID.</returns>
+        </member>
+    </members>
+</doc>
