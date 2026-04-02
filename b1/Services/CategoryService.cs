@@ -1,5 +1,5 @@
 ﻿
-
+using FluentValidation;
 using b1.Data;
 using Microsoft.EntityFrameworkCore.Query;
 
@@ -12,8 +12,9 @@ namespace b1.ToDo
         {
             _appDbContext = appDbContext;
         }
-        public async Task AddCategoryAsync(string name)
+        public async Task<Category> AddCategoryAsync(string name)
         {
+            
             var newCategory = new Category
             {
                 NameCategory = name,
@@ -21,10 +22,15 @@ namespace b1.ToDo
             };
             _appDbContext.Categories.Add(newCategory);
             await _appDbContext.SaveChangesAsync();
+            return newCategory;
         }
 
         public async Task<bool> CategoryExistsAsync(int? CategoryID)
         {
+            if(CategoryID == null)
+            {
+                throw new ArgumentException("CategoryID không được để trống");
+            }
             return await _appDbContext.Categories.AnyAsync(c => c.Id == CategoryID);
         }
 

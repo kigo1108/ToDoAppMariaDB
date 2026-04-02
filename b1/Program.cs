@@ -1,7 +1,10 @@
 
 using b1.Data;
-using b1.ToDo;
-using Microsoft.EntityFrameworkCore;
+using b1.Middlewares;
+using b1.Validators.Category;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using Serilog;
 
 
 namespace b1
@@ -36,7 +39,21 @@ namespace b1
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
             //dang ky AppDbContext vao DI container va cau hinh ket noi den MySQL
             builder.Services.AddDbContext<AppDbContext>(opsitions =>opsitions.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+            //đăng kí FluentValidation
+            builder.Services.AddFluentValidationAutoValidation();
+            builder.Services.AddValidatorsFromAssemblyContaining<TodoCreateDtoValidator>();
+            builder.Services.AddValidatorsFromAssemblyContaining <CategoryCreateDtoValidator>();
+            // 1. Cấu hình Serilog
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Information() // Ghi từ mức Info trở lên (Info, Warning, Error, Fatal)
+                .WriteTo.Console()           // Hiện log đẹp mắt ở màn hình Console
+                .WriteTo.File("Logs/todo-api-.txt", rollingInterval: RollingInterval.Day) // Mỗi ngày tạo 1 file log mới trong folder Logs
+                .CreateLogger();
+
+            // 2. Thay thế Logger mặc định của .NET bằng Serilog
+            builder.Host.UseSerilog();
             var app = builder.Build();
+            app.UseMiddleware<ExceptionMiddleware>();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

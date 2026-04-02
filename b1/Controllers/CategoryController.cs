@@ -1,7 +1,10 @@
 ﻿
 
+using b1.Wrappers;
+
 namespace b1.Controllers
 {
+    [ApiController]
     public class CategoryController : Controller
     {
         private readonly ICategoryService _categoryService;
@@ -14,14 +17,11 @@ namespace b1.Controllers
         /// </summary>
         /// <param name="name"></param>
         [HttpPost("Add_Category")]
-        public async Task<IActionResult> AddCategory(string name)
+        public async Task<IActionResult> AddCategory(CategoryCreateDto categoryCreate)
         {
-            if (name == null)
-            {
-                return BadRequest("Name cannot be null");
-            }
-            await _categoryService.AddCategoryAsync(name);
-            return Ok($"Added category: {name}");
+            
+            var cate = await _categoryService.AddCategoryAsync(categoryCreate.NameCategory);
+            return Ok(ApiResponse<Category>.SuccessResponse(cate,"thêm thành công"));
         }
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace b1.Controllers
         public async Task<IActionResult> DeleteCategory(int Id)
         {
             await _categoryService.DeleteCategoryAsync(Id);
-            return Ok($"Deleted category with Id: {Id}");
+            return Ok(ApiResponse<string>.SuccessResponse($"đã xóa thành công Category có {Id}"));
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace b1.Controllers
         public async Task<ActionResult<List<CategoryGetDto>>> GetAllCategory()
         {
             var categories = await _categoryService.GetAllCategoriesAsync();
-            return Ok(categories);
+            return Ok(ApiResponse<List<CategoryGetDto>>.SuccessResponse(categories,"hiện thành công"));
         }
     }
 }

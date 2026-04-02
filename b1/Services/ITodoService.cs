@@ -4,9 +4,9 @@ namespace b1.ToDo
 {
     public interface ITodoService
     {
-        
-        Task DeleteToDo(int Id);
-        Task MarkComple(int Id);
+
+        Task <ToDoGetDto>DeleteToDo(int Id);
+        Task <ToDoGetDto> MarkComple(int Id);
         Task<TodoItem> AddTodoAsync(TodoItem? item);
         Task<ToDoGetDto> FinByIdDtoAsync(int Id);
         Task<List<ToDoGetDto>> GetAllTodosDtoAsync(); // Trả về DTO

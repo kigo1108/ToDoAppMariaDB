@@ -4,7 +4,7 @@
         <name>b1</name>
     </assembly>
     <members>
-        <member name="M:b1.Controllers.CategoryController.AddCategory(System.String)">
+        <member name="M:b1.Controllers.CategoryController.AddCategory(b1.DTOs.CategoryCreateDto)">
             <summary>
             Them danh muc moi vao danh sach cac danh muc
             </summary>

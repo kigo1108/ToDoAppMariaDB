@@ -3,68 +3,24 @@
   "WorkspaceRootPath": "D:\\workandlearn\\visual_Net\\b1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\todo\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\todo\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\todo\\itodoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\todo\\itodoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\todo\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\todo\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\services\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\services\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\dtos\\categorycreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\dtos\\categorycreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\services\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\services\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\todo\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\todo\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\dtos\\todogetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\dtos\\todogetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\dtos\\categorygetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\dtos\\categorygetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\dtos\\todocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\dtos\\todocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\migrations\\20260401073948_addupdatesoftdeletelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\migrations\\20260401073948_addupdatesoftdeletelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,214 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ToDoController.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Controllers\\ToDoController.cs",
-              "RelativeDocumentMoniker": "b1\\Controllers\\ToDoController.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Controllers\\ToDoController.cs",
-              "RelativeToolTip": "b1\\Controllers\\ToDoController.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAwwF4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T06:48:11.434Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CategoryCreateDto.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\DTOs\\CategoryCreateDto.cs",
-              "RelativeDocumentMoniker": "b1\\DTOs\\CategoryCreateDto.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\DTOs\\CategoryCreateDto.cs",
-              "RelativeToolTip": "b1\\DTOs\\CategoryCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:12:58.887Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "b1\\Controllers\\CategoryController.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "b1\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:01:24.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\ToDo\\CategoryService.cs",
-              "RelativeDocumentMoniker": "b1\\ToDo\\CategoryService.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\ToDo\\CategoryService.cs",
-              "RelativeToolTip": "b1\\ToDo\\CategoryService.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAkwDYAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:15:09.388Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "TodoService.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\ToDo\\TodoService.cs",
-              "RelativeDocumentMoniker": "b1\\ToDo\\TodoService.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\ToDo\\TodoService.cs",
-              "RelativeToolTip": "b1\\ToDo\\TodoService.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAUwHMAAAAgAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Services\\TodoService.cs",
+              "RelativeDocumentMoniker": "b1\\Services\\TodoService.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Services\\TodoService.cs",
+              "RelativeToolTip": "b1\\Services\\TodoService.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAswBIAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T04:54:46.355Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ITodoService.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\ToDo\\ITodoService.cs",
-              "RelativeDocumentMoniker": "b1\\ToDo\\ITodoService.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\ToDo\\ITodoService.cs",
-              "RelativeToolTip": "b1\\ToDo\\ITodoService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAqwA8AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T04:54:30.842Z",
+              "WhenOpened": "2026-04-02T08:32:21.754Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "b1\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "b1\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBkAAAAVAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Program.cs",
+              "RelativeDocumentMoniker": "b1\\Program.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Program.cs",
+              "RelativeToolTip": "b1\\Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T06:48:27.778Z",
+              "WhenOpened": "2026-04-02T08:27:26.883Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ToDoGetDto.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\DTOs\\ToDoGetDto.cs",
-              "RelativeDocumentMoniker": "b1\\DTOs\\ToDoGetDto.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\DTOs\\ToDoGetDto.cs",
-              "RelativeToolTip": "b1\\DTOs\\ToDoGetDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:10:37.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "b1\\Data\\AppDbContext.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "b1\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAApwAsAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:22:29.568Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Category.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "b1\\Models\\Category.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Models\\Category.cs",
-              "RelativeToolTip": "b1\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:09:23.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "ICategoryService.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\ToDo\\ICategoryService.cs",
-              "RelativeDocumentMoniker": "b1\\ToDo\\ICategoryService.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\ToDo\\ICategoryService.cs",
-              "RelativeToolTip": "b1\\ToDo\\ICategoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAiAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Services\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "b1\\Services\\ICategoryService.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Services\\ICategoryService.cs",
+              "RelativeToolTip": "b1\\Services\\ICategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:01:30.89Z",
+              "WhenOpened": "2026-04-02T08:21:35.897Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CategoryGetDto.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\DTOs\\CategoryGetDto.cs",
-              "RelativeDocumentMoniker": "b1\\DTOs\\CategoryGetDto.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\DTOs\\CategoryGetDto.cs",
-              "RelativeToolTip": "b1\\DTOs\\CategoryGetDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "b1\\Services\\CategoryService.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Services\\CategoryService.cs",
+              "RelativeToolTip": "b1\\Services\\CategoryService.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwDEAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:13:35.891Z",
+              "WhenOpened": "2026-04-02T08:07:32.884Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TodoItem.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Models\\TodoItem.cs",
-              "RelativeDocumentMoniker": "b1\\Models\\TodoItem.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Models\\TodoItem.cs",
-              "RelativeToolTip": "b1\\Models\\TodoItem.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAA1wA4AAAA3AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "b1\\Controllers\\CategoryController.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "b1\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwCkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:32:18.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TodoCreateDto.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\DTOs\\TodoCreateDto.cs",
-              "RelativeDocumentMoniker": "b1\\DTOs\\TodoCreateDto.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\DTOs\\TodoCreateDto.cs",
-              "RelativeToolTip": "b1\\DTOs\\TodoCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:10:33.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "20260401073948_AddUpdateSoftDeleteLogic.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Migrations\\20260401073948_AddUpdateSoftDeleteLogic.cs",
-              "RelativeDocumentMoniker": "b1\\Migrations\\20260401073948_AddUpdateSoftDeleteLogic.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Migrations\\20260401073948_AddUpdateSoftDeleteLogic.cs",
-              "RelativeToolTip": "b1\\Migrations\\20260401073948_AddUpdateSoftDeleteLogic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:39:49.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AppDbContextModelSnapshot.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "b1\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeToolTip": "b1\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwDUAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T07:33:21.376Z",
+              "WhenOpened": "2026-04-02T08:07:20.692Z",
               "EditorCaption": ""
             }
           ]

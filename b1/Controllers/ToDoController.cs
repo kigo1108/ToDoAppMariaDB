@@ -1,9 +1,13 @@
 ﻿
 
 using b1.Data;
+using b1.Wrappers;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Serilog;
 
 namespace b1.Controllers
 {
+    [ApiController]
     public class ToDoController : ControllerBase
     {
         private readonly ITodoService _itodoService;
@@ -20,17 +24,19 @@ namespace b1.Controllers
         [HttpPost("add-todo")]
         public async Task<ActionResult<TodoItem>> AddTodo(TodoCreateDto dto)
         {
-            if (dto == null)
-            {
-                return BadRequest("Title cannot be null");
-            }
+            //if (dto == null)
+            //{
+            //    return BadRequest("Title cannot be null");
+            //}
             var item = new TodoItem
             {
                 Title = dto.Title,
                 CategoryId = dto.CategoryId
             };
             var CreatedItem = await _itodoService.AddTodoAsync(item);
-            return CreatedAtAction(nameof(GetById), new { id = CreatedItem.Id }, CreatedItem);
+            return CreatedAtAction(nameof(GetById), new { id = CreatedItem.Id },
+        ApiResponse<TodoItem>.SuccessResponse(CreatedItem, "Thêm mới thành công"));
+
 
         }
         /// <summary>
@@ -38,9 +44,9 @@ namespace b1.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("todoslist")]
-        public async Task<List<ToDoGetDto>> GetallToDo()
+        public async Task<IActionResult> GetallToDo()
         {
-            return await _appDbContext.TodoItems
+            var data= await _appDbContext.TodoItems
                 .Select(t => new ToDoGetDto
                 {
                     Id = t.Id,
@@ -51,6 +57,8 @@ namespace b1.Controllers
 
                 })
                 .ToListAsync();
+            return Ok(ApiResponse<List<ToDoGetDto>>.SuccessResponse(data, "Lấy danh sách thành công"));
+
         }
         /// <summary>
         /// danh dau cong viec da lam xong theo Id
@@ -60,8 +68,9 @@ namespace b1.Controllers
         [HttpPut("Update_Todo")]
         public async Task<IActionResult> UpdateToDo(int Id)
         {
-            await _itodoService.MarkComple(Id);
-            return Ok($"Updated todo with Id: {Id}");
+            var da = await _itodoService.MarkComple(Id);
+                
+            return Ok(ApiResponse<ToDoGetDto>.SuccessResponse(da, "Sửa đổi thành công"));
 
         }
         /// <summary>
@@ -72,8 +81,8 @@ namespace b1.Controllers
         [HttpDelete("Delete_toDo")]
         public async Task<IActionResult> DeleteToDo(int Id)
         {
-            await _itodoService.DeleteToDo(Id);
-            return Ok($"Deleted todo with Id: {Id}");
+            var aa = await _itodoService.DeleteToDo(Id);
+            return Ok(ApiResponse<ToDoGetDto>.SuccessResponse(aa, $"xóa thành công ToDo có {Id}"));
         }
         /// <summary>
         /// tìm kiếm theo id công việc
@@ -84,7 +93,7 @@ namespace b1.Controllers
         public async Task<IActionResult> GetById(int id)
         {
             var item = await _itodoService.FinByIdDtoAsync(id);
-            return item == null ? NotFound() : Ok(item);
+            return Ok(ApiResponse<ToDoGetDto>.SuccessResponse(item, $"tìm thấy To do co {id}"));
         }
 
         /// <summary>
@@ -96,9 +105,9 @@ namespace b1.Controllers
             var items = await _itodoService.GetByCategoryIdDtoAsync(categoryId);
             if (items == null || items.Count == 0)
             {
-                return NotFound($"No todo items found for categoryId: {categoryId}");
+                throw new KeyNotFoundException("không tìm thấy to nào trong category này");
             }
-            return Ok(items);
+            return Ok(ApiResponse<List<ToDoGetDto>>.SuccessResponse(items,"tìm thấy các công việc sau"));
         }
         /// <summary>
         /// hiển thị danh sách theo trang
@@ -112,7 +121,7 @@ namespace b1.Controllers
             [FromQuery] int size = 10)
         {
             var items = await _itodoService.GetPagedTodosAsync(search, sortBy, isDesc, page, size);
-            return Ok(items);
+            return Ok(ApiResponse<List<ToDoGetDto>>.SuccessResponse(items, $"Page {page}"));
         }
 
         ///<summary>
@@ -121,6 +130,7 @@ namespace b1.Controllers
         [HttpPost("seed-pro")]
         public async Task<IActionResult> SeedPro(int count = 50, int categoryId = 1)
         {
+            Log.Information("Nam đang thực hiện Seed {Count} dữ liệu cho CategoryId {Id}", count, categoryId);
             var faker = new Bogus.Faker<TodoItem>()
                 .RuleFor(t => t.Title, f => f.Lorem.Sentence(3)) // Tạo câu 3 từ ngẫu nhiên
                 .RuleFor(t => t.IsCompleted, f => f.Random.Bool()) // Random đúng/sai
@@ -132,7 +142,7 @@ namespace b1.Controllers
             _appDbContext.TodoItems.AddRange(items);
             await _appDbContext.SaveChangesAsync();
 
-            return Ok($"Đã bơm {count} dữ liệu 'như thật' vào Database!");
+            return Ok(ApiResponse<string>.SuccessResponse($"Đã bơm {count} dữ liệu 'như thật' vào Database!"));
         }
     }
 }

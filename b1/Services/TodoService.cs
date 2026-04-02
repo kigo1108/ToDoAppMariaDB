@@ -1,5 +1,6 @@
 ﻿using b1.Data;
 using b1.Models;
+using b1.Wrappers;
 using Microsoft.EntityFrameworkCore;
 
 namespace b1.ToDo
@@ -30,20 +31,18 @@ namespace b1.ToDo
             var todoItem = await _appDbContext.TodoItems.FindAsync(Id);
             if (todoItem == null)
             {
-                return null;
+                throw new KeyNotFoundException($"Không tìm thấy ToDo với ID {Id}");
             }
             return todoItem;
         }
-
-        public async Task DeleteToDo(int Id)
+        //xóa todo
+        public async Task<ToDoGetDto> DeleteToDo(int Id)
         {
+            var dtoTOdo = await FinByIdDtoAsync(Id);
             var todo = await FindById(Id);
-            if (todo == null)
-            {
-                return;
-            }
             _appDbContext.TodoItems.Remove(todo);
             await _appDbContext.SaveChangesAsync();
+            return dtoTOdo;
         }
 
         public async Task<List<ToDoGetDto>> GetAllTodosDtoAsync()
@@ -64,22 +63,27 @@ namespace b1.ToDo
                 CategoryName = t.Category != null ? t.Category.NameCategory : "Không có danh mục"
             });
         }
-        public async Task MarkComple(int Id)
+        //đánh dấu hoàn thành
+        public async Task<ToDoGetDto> MarkComple(int Id)
         {
             var todo = await FindById(Id);
             if (todo == null)
             {
-                return;
+                throw new KeyNotFoundException($"Không tìm thấy ToDo với ID {Id}");
             }
             todo.IsCompleted = true;
             _appDbContext.TodoItems.Update(todo);
             await _appDbContext.SaveChangesAsync();
+            return await FinByIdDtoAsync(Id);
         }
+        //find by categoryId trả về DTO
         public async Task<List<ToDoGetDto>> GetByCategoryIdDtoAsync(int categoryId)
         {
             var query = _appDbContext.TodoItems.Where(t => t.CategoryId == categoryId);
             return await MapTodoToDto(query).ToListAsync();
         }
+
+        //find by id trả về DTO
         public async Task<ToDoGetDto> FinByIdDtoAsync(int id)
         {
             var query = _appDbContext.TodoItems.Where(t => t.Id == id);
@@ -127,10 +131,15 @@ namespace b1.ToDo
             // 3. Áp dụng khuôn DTO và Phân trang (Tận dụng hàm Map đã có của Nam)
             var dtoQuery = MapTodoToDto(query);
 
-            return await dtoQuery
+            var page =await dtoQuery
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
+            if(!page.Any())
+            {
+                throw new Exception($"không có trang {pageNumber}");
+            }
+            return page;
         }
     }
 }
