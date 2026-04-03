@@ -4,11 +4,13 @@ using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using b1.Data;
 using b1.Wrappers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Serilog;
 
 namespace b1.Controllers
 {
+    [Authorize]
     [ApiController]
     public class ToDoController : ControllerBase
     {

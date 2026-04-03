@@ -9,8 +9,9 @@ namespace b1.Data
         }
         public DbSet<TodoItem> TodoItems { get; set; }
         public DbSet<Category> Categories { get; set; }
-    
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+        public DbSet<User> Users { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 

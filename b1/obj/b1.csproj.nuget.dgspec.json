@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "Bogus": {
               "target": "Package",
               "version": "[35.6.5, )"
@@ -65,6 +69,10 @@
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[10.0.5, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
@@ -110,13 +118,17 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
-            "Swashbuckle.AspNetCore.SwaggerGen": {
+            "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[10.1.7, )"
             },
-            "Swashbuckle.AspNetCore.SwaggerUI": {
+            "Swashbuckle.AspNetCore.Filters": {
               "target": "Package",
-              "version": "[10.1.7, )"
+              "version": "[10.0.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.17.0, )"
             }
           },
           "imports": [

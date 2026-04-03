@@ -6,7 +6,9 @@ using b1.Middlewares;
 using b1.Validators.Category;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Microsoft.IdentityModel.Tokens;
 using Serilog;
+using System.Text;
 
 
 namespace b1
@@ -38,7 +40,17 @@ namespace b1
             builder.Services.AddSwaggerDocumentation();
             builder.Services.AddOpenApi();
             builder.Services.AddAutoMapper(typeof(MappingProfile));
-
+            builder.Services.AddAuthentication().AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
+                        builder.Configuration.GetSection("AppSettings:Token").Value!))
+                };
+            });
             var app = builder.Build();
 
             // 3. Configure HTTP Request Pipeline
@@ -51,6 +63,7 @@ namespace b1
             }
 
             app.UseHttpsRedirection();
+            app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllers();
 

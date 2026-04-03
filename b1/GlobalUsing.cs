@@ -7,3 +7,4 @@ global using b1.Validators.Todo;
 global using b1.Validators.Category;
 global using FluentValidation;
 global using FluentValidation.AspNetCore;
+global using b1.Services;

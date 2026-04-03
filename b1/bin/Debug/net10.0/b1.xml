@@ -4,6 +4,16 @@
         <name>b1</name>
     </assembly>
     <members>
+        <member name="M:b1.Controllers.AuthController.Register(b1.DTOs.UserDto)">
+            <summary>
+            Đăng kí 1 User mới
+            </summary>
+        </member>
+        <member name="M:b1.Controllers.AuthController.Login(b1.DTOs.UserDto)">
+            <summary>
+             Đăng nhập và tạo 1 token
+            </summary>
+        </member>
         <member name="M:b1.Controllers.CategoryController.AddCategory(b1.DTOs.CategoryCreateDto)">
             <summary>
             Them danh muc moi vao danh sach cac danh muc
@@ -123,6 +133,18 @@
             <inheritdoc />
         </member>
         <member name="M:b1.Migrations.AddUpdateSoftDeleteLogic.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:b1.Migrations.AddUser">
+            <inheritdoc />
+        </member>
+        <member name="M:b1.Migrations.AddUser.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:b1.Migrations.AddUser.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:b1.Migrations.AddUser.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
         <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type)">
