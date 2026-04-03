@@ -1,6 +1,8 @@
 ﻿
-using FluentValidation;
+using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using b1.Data;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore.Query;
 
 namespace b1.ToDo
@@ -8,18 +10,16 @@ namespace b1.ToDo
     public class CategoryService : ICategoryService
     {
         private readonly AppDbContext _appDbContext;
-        public CategoryService(AppDbContext appDbContext)
+        private readonly IMapper _mapper;
+        public CategoryService(AppDbContext appDbContext, IMapper mapper)
         {
             _appDbContext = appDbContext;
+            _mapper = mapper;
         }
-        public async Task<Category> AddCategoryAsync(string name)
+        public async Task<Category> AddCategoryAsync(CategoryCreateDto CateDto)
         {
             
-            var newCategory = new Category
-            {
-                NameCategory = name,
-                IsDeleted = false
-            };
+            var newCategory = _mapper.Map<Category>(CateDto);
             _appDbContext.Categories.Add(newCategory);
             await _appDbContext.SaveChangesAsync();
             return newCategory;
@@ -47,24 +47,16 @@ namespace b1.ToDo
 
         public async Task<List<CategoryGetDto>> GetAllCategoriesAsync()
         {
-            return await MapTodoToDto(_appDbContext.Categories).ToListAsync();
+            //return await MapTodoToDto(_appDbContext.Categories).ToListAsync();
+            return await _appDbContext.Categories
+                .Where(c => !c.IsDeleted)
+                .ProjectTo<CategoryGetDto>(_mapper.ConfigurationProvider)
+                .ToListAsync();
         }
-        private IQueryable<CategoryGetDto> MapTodoToDto(IQueryable<Category> query)
+
+        public async Task<List<Category>> GetAllCategoriesNoTodoAsync()
         {
-            return query.Select(t => new CategoryGetDto
-            {
-                Id = t.Id,
-                NameCategory = t.NameCategory,
-                ToDoItems = t.TodoItems.Select(ti => new ToDoGetDto
-                {
-                    Id = ti.Id,
-                    Title = ti.Title,
-                    IsCompleted = ti.IsCompleted
-                }).ToList()
-            });
+            return await _appDbContext.Categories.Where(c => !c.IsDeleted).ToListAsync();
         }
-
-
-
     }
 }

@@ -313,3 +313,857 @@ ORDER BY `c`.`Id`
 2026-04-02 15:40:54.597 +07:00 [INF] Executed action b1.Controllers.CategoryController.GetAllCategory (b1) in 18.6228ms
 2026-04-02 15:40:54.600 +07:00 [INF] Executed endpoint 'b1.Controllers.CategoryController.GetAllCategory (b1)'
 2026-04-02 15:40:54.602 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/GetAllCategory - 200 null application/json; charset=utf-8 34.304ms
+2026-04-02 16:17:45.338 +07:00 [INF] Now listening on: https://localhost:7122
+2026-04-02 16:17:45.365 +07:00 [INF] Now listening on: http://localhost:5288
+2026-04-02 16:17:45.701 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-02 16:17:45.707 +07:00 [INF] Hosting environment: Development
+2026-04-02 16:17:45.708 +07:00 [INF] Content root path: D:\workandlearn\visual_Net\b1\b1
+2026-04-02 16:17:46.154 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/index.html - null null
+2026-04-02 16:17:46.458 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/index.html - 304 null null 314.8097ms
+2026-04-02 16:17:46.481 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/swagger-ui.css - null null
+2026-04-02 16:17:46.481 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/swagger-ui-standalone-preset.js - null null
+2026-04-02 16:17:46.481 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-02 16:17:46.482 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/index.js - null null
+2026-04-02 16:17:46.481 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/swagger-ui-bundle.js - null null
+2026-04-02 16:17:46.519 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/_vs/browserLink - null null
+2026-04-02 16:17:46.481 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/index.css - null null
+2026-04-02 16:17:46.551 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/_framework/aspnetcore-browser-refresh.js - 200 14909 application/javascript; charset=utf-8 69.4123ms
+2026-04-02 16:17:46.551 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/swagger-ui-standalone-preset.js - 304 null null 70.0554ms
+2026-04-02 16:17:46.554 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/index.js - 200 null application/javascript;charset=utf-8 71.8843ms
+2026-04-02 16:17:46.556 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/swagger-ui-bundle.js - 304 null null 75.106ms
+2026-04-02 16:17:46.569 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/index.css - 304 null null 88.0701ms
+2026-04-02 16:17:46.551 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/swagger-ui.css - 304 null null 70.2962ms
+2026-04-02 16:17:46.623 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/_vs/browserLink - 200 null text/javascript; charset=UTF-8 140.9475ms
+2026-04-02 16:17:46.649 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/openapi/v1.json - null null
+2026-04-02 16:17:46.660 +07:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-04-02 16:17:46.688 +07:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-04-02 16:17:46.693 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/openapi/v1.json - 200 null application/json;charset=utf-8 43.6321ms
+2026-04-02 16:18:18.552 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7122/Add_Category - application/json 30
+2026-04-02 16:18:18.562 +07:00 [INF] Executing endpoint 'b1.Controllers.CategoryController.AddCategory (b1)'
+2026-04-02 16:18:18.616 +07:00 [INF] Route matched with {action = "AddCategory", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddCategory(b1.DTOs.CategoryCreateDto) on controller b1.Controllers.CategoryController (b1).
+2026-04-02 16:18:18.948 +07:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-04-02 16:18:18.980 +07:00 [INF] Executed action b1.Controllers.CategoryController.AddCategory (b1) in 358.0679ms
+2026-04-02 16:18:18.982 +07:00 [INF] Executed endpoint 'b1.Controllers.CategoryController.AddCategory (b1)'
+2026-04-02 16:18:18.986 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7122/Add_Category - 400 null application/problem+json; charset=utf-8 433.8652ms
+2026-04-02 16:18:21.640 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7122/Add_Category - application/json 30
+2026-04-02 16:18:21.644 +07:00 [INF] Executing endpoint 'b1.Controllers.CategoryController.AddCategory (b1)'
+2026-04-02 16:18:21.645 +07:00 [INF] Route matched with {action = "AddCategory", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddCategory(b1.DTOs.CategoryCreateDto) on controller b1.Controllers.CategoryController (b1).
+2026-04-02 16:18:21.670 +07:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-04-02 16:18:21.672 +07:00 [INF] Executed action b1.Controllers.CategoryController.AddCategory (b1) in 25.0128ms
+2026-04-02 16:18:21.674 +07:00 [INF] Executed endpoint 'b1.Controllers.CategoryController.AddCategory (b1)'
+2026-04-02 16:18:21.675 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7122/Add_Category - 400 null application/problem+json; charset=utf-8 35.1015ms
+2026-04-02 16:18:23.870 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7122/Add_Category - application/json 30
+2026-04-02 16:18:23.875 +07:00 [INF] Executing endpoint 'b1.Controllers.CategoryController.AddCategory (b1)'
+2026-04-02 16:18:23.876 +07:00 [INF] Route matched with {action = "AddCategory", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddCategory(b1.DTOs.CategoryCreateDto) on controller b1.Controllers.CategoryController (b1).
+2026-04-02 16:18:23.897 +07:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-04-02 16:18:23.899 +07:00 [INF] Executed action b1.Controllers.CategoryController.AddCategory (b1) in 20.6871ms
+2026-04-02 16:18:23.901 +07:00 [INF] Executed endpoint 'b1.Controllers.CategoryController.AddCategory (b1)'
+2026-04-02 16:18:23.902 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7122/Add_Category - 400 null application/problem+json; charset=utf-8 32.1202ms
+2026-04-02 16:18:43.137 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/GetAllCategory - null null
+2026-04-02 16:18:43.142 +07:00 [INF] Executing endpoint 'b1.Controllers.CategoryController.GetAllCategory (b1)'
+2026-04-02 16:18:43.152 +07:00 [INF] Route matched with {action = "GetAllCategory", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[b1.DTOs.CategoryGetDto]]] GetAllCategory() on controller b1.Controllers.CategoryController (b1).
+2026-04-02 16:18:44.376 +07:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`NameCategory`, `t`.`Id`, `t`.`Title`, `t`.`IsCompleted`
+FROM `Categories` AS `c`
+LEFT JOIN `TodoItems` AS `t` ON `c`.`Id` = `t`.`CategoryId`
+WHERE NOT (`c`.`IsDeleted`)
+ORDER BY `c`.`Id`
+2026-04-02 16:18:44.438 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[System.Collections.Generic.List`1[[b1.DTOs.CategoryGetDto, b1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-02 16:18:44.447 +07:00 [INF] Executed action b1.Controllers.CategoryController.GetAllCategory (b1) in 1292.7099ms
+2026-04-02 16:18:44.450 +07:00 [INF] Executed endpoint 'b1.Controllers.CategoryController.GetAllCategory (b1)'
+2026-04-02 16:18:44.459 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/GetAllCategory - 200 null application/json; charset=utf-8 1321.3803ms
+2026-04-02 16:18:56.570 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7122/Add_Category - application/json 31
+2026-04-02 16:18:56.575 +07:00 [INF] Executing endpoint 'b1.Controllers.CategoryController.AddCategory (b1)'
+2026-04-02 16:18:56.577 +07:00 [INF] Route matched with {action = "AddCategory", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddCategory(b1.DTOs.CategoryCreateDto) on controller b1.Controllers.CategoryController (b1).
+2026-04-02 16:18:56.937 +07:00 [INF] Executed DbCommand (43ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `Categories` (`IsDeleted`, `NameCategory`)
+VALUES (@p0, @p1)
+RETURNING `Id`;
+2026-04-02 16:18:56.976 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[b1.Models.Category, b1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-02 16:18:56.981 +07:00 [INF] Executed action b1.Controllers.CategoryController.AddCategory (b1) in 401.7789ms
+2026-04-02 16:18:56.983 +07:00 [INF] Executed endpoint 'b1.Controllers.CategoryController.AddCategory (b1)'
+2026-04-02 16:18:56.985 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7122/Add_Category - 200 null application/json; charset=utf-8 415.0026ms
+2026-04-02 16:19:03.561 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7122/Add_Category - application/json 31
+2026-04-02 16:19:03.572 +07:00 [INF] Executing endpoint 'b1.Controllers.CategoryController.AddCategory (b1)'
+2026-04-02 16:19:03.573 +07:00 [INF] Route matched with {action = "AddCategory", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddCategory(b1.DTOs.CategoryCreateDto) on controller b1.Controllers.CategoryController (b1).
+2026-04-02 16:19:03.690 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `Categories` (`IsDeleted`, `NameCategory`)
+VALUES (@p0, @p1)
+RETURNING `Id`;
+2026-04-02 16:19:03.693 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[b1.Models.Category, b1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-02 16:19:03.695 +07:00 [INF] Executed action b1.Controllers.CategoryController.AddCategory (b1) in 120.1513ms
+2026-04-02 16:19:03.697 +07:00 [INF] Executed endpoint 'b1.Controllers.CategoryController.AddCategory (b1)'
+2026-04-02 16:19:03.699 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7122/Add_Category - 200 null application/json; charset=utf-8 137.4545ms
+2026-04-02 16:19:06.180 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7122/Add_Category - application/json 31
+2026-04-02 16:19:06.183 +07:00 [INF] Executing endpoint 'b1.Controllers.CategoryController.AddCategory (b1)'
+2026-04-02 16:19:06.185 +07:00 [INF] Route matched with {action = "AddCategory", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddCategory(b1.DTOs.CategoryCreateDto) on controller b1.Controllers.CategoryController (b1).
+2026-04-02 16:19:06.209 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `Categories` (`IsDeleted`, `NameCategory`)
+VALUES (@p0, @p1)
+RETURNING `Id`;
+2026-04-02 16:19:06.212 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[b1.Models.Category, b1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-02 16:19:06.215 +07:00 [INF] Executed action b1.Controllers.CategoryController.AddCategory (b1) in 28.1048ms
+2026-04-02 16:19:06.217 +07:00 [INF] Executed endpoint 'b1.Controllers.CategoryController.AddCategory (b1)'
+2026-04-02 16:19:06.219 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7122/Add_Category - 200 null application/json; charset=utf-8 38.4785ms
+2026-04-02 16:19:10.053 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/GetAllCategory - null null
+2026-04-02 16:19:10.056 +07:00 [INF] Executing endpoint 'b1.Controllers.CategoryController.GetAllCategory (b1)'
+2026-04-02 16:19:10.062 +07:00 [INF] Route matched with {action = "GetAllCategory", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[b1.DTOs.CategoryGetDto]]] GetAllCategory() on controller b1.Controllers.CategoryController (b1).
+2026-04-02 16:19:10.084 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`NameCategory`, `t`.`Id`, `t`.`Title`, `t`.`IsCompleted`
+FROM `Categories` AS `c`
+LEFT JOIN `TodoItems` AS `t` ON `c`.`Id` = `t`.`CategoryId`
+WHERE NOT (`c`.`IsDeleted`)
+ORDER BY `c`.`Id`
+2026-04-02 16:19:10.089 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[System.Collections.Generic.List`1[[b1.DTOs.CategoryGetDto, b1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-02 16:19:10.091 +07:00 [INF] Executed action b1.Controllers.CategoryController.GetAllCategory (b1) in 25.0767ms
+2026-04-02 16:19:10.092 +07:00 [INF] Executed endpoint 'b1.Controllers.CategoryController.GetAllCategory (b1)'
+2026-04-02 16:19:10.094 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/GetAllCategory - 200 null application/json; charset=utf-8 41.0047ms
+2026-04-02 16:19:25.261 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7122/seed-pro?count=10&categoryId=4 - null 0
+2026-04-02 16:19:25.266 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.SeedPro (b1)'
+2026-04-02 16:19:25.277 +07:00 [INF] Route matched with {action = "SeedPro", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SeedPro(Int32, Int32) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:19:26.009 +07:00 [INF] Nam đang thực hiện Seed 10 dữ liệu cho CategoryId 4
+2026-04-02 16:19:26.146 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Boolean), @p8='?' (Size = 4000), @p9='?' (DbType = Int32), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = Int32), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Int32), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Int32), @p19='?' (DbType = Boolean), @p20='?' (Size = 4000), @p21='?' (DbType = Int32), @p22='?' (DbType = Boolean), @p23='?' (Size = 4000), @p24='?' (DbType = Int32), @p25='?' (DbType = Boolean), @p26='?' (Size = 4000), @p27='?' (DbType = Int32), @p28='?' (DbType = Boolean), @p29='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p0, @p1, @p2)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p3, @p4, @p5)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p6, @p7, @p8)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p9, @p10, @p11)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p12, @p13, @p14)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p15, @p16, @p17)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p18, @p19, @p20)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p21, @p22, @p23)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p24, @p25, @p26)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p27, @p28, @p29)
+RETURNING `Id`;
+2026-04-02 16:19:26.172 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-02 16:19:26.176 +07:00 [INF] Executed action b1.Controllers.ToDoController.SeedPro (b1) in 896.1316ms
+2026-04-02 16:19:26.178 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.SeedPro (b1)'
+2026-04-02 16:19:26.180 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7122/seed-pro?count=10&categoryId=4 - 200 null application/json; charset=utf-8 919.4006ms
+2026-04-02 16:19:27.716 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7122/seed-pro?count=10&categoryId=6 - null 0
+2026-04-02 16:19:27.720 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.SeedPro (b1)'
+2026-04-02 16:19:27.722 +07:00 [INF] Route matched with {action = "SeedPro", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SeedPro(Int32, Int32) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:19:27.734 +07:00 [INF] Nam đang thực hiện Seed 10 dữ liệu cho CategoryId 6
+2026-04-02 16:19:27.742 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Boolean), @p8='?' (Size = 4000), @p9='?' (DbType = Int32), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = Int32), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Int32), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Int32), @p19='?' (DbType = Boolean), @p20='?' (Size = 4000), @p21='?' (DbType = Int32), @p22='?' (DbType = Boolean), @p23='?' (Size = 4000), @p24='?' (DbType = Int32), @p25='?' (DbType = Boolean), @p26='?' (Size = 4000), @p27='?' (DbType = Int32), @p28='?' (DbType = Boolean), @p29='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p0, @p1, @p2)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p3, @p4, @p5)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p6, @p7, @p8)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p9, @p10, @p11)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p12, @p13, @p14)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p15, @p16, @p17)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p18, @p19, @p20)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p21, @p22, @p23)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p24, @p25, @p26)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p27, @p28, @p29)
+RETURNING `Id`;
+2026-04-02 16:19:27.751 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-02 16:19:27.754 +07:00 [INF] Executed action b1.Controllers.ToDoController.SeedPro (b1) in 29.8498ms
+2026-04-02 16:19:27.756 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.SeedPro (b1)'
+2026-04-02 16:19:27.757 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7122/seed-pro?count=10&categoryId=6 - 200 null application/json; charset=utf-8 40.4771ms
+2026-04-02 16:19:29.225 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7122/seed-pro?count=10&categoryId=7 - null 0
+2026-04-02 16:19:29.228 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.SeedPro (b1)'
+2026-04-02 16:19:29.229 +07:00 [INF] Route matched with {action = "SeedPro", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SeedPro(Int32, Int32) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:19:29.241 +07:00 [INF] Nam đang thực hiện Seed 10 dữ liệu cho CategoryId 7
+2026-04-02 16:19:29.250 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Boolean), @p8='?' (Size = 4000), @p9='?' (DbType = Int32), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = Int32), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Int32), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Int32), @p19='?' (DbType = Boolean), @p20='?' (Size = 4000), @p21='?' (DbType = Int32), @p22='?' (DbType = Boolean), @p23='?' (Size = 4000), @p24='?' (DbType = Int32), @p25='?' (DbType = Boolean), @p26='?' (Size = 4000), @p27='?' (DbType = Int32), @p28='?' (DbType = Boolean), @p29='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p0, @p1, @p2)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p3, @p4, @p5)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p6, @p7, @p8)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p9, @p10, @p11)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p12, @p13, @p14)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p15, @p16, @p17)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p18, @p19, @p20)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p21, @p22, @p23)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p24, @p25, @p26)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p27, @p28, @p29)
+RETURNING `Id`;
+2026-04-02 16:19:29.258 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-02 16:19:29.260 +07:00 [INF] Executed action b1.Controllers.ToDoController.SeedPro (b1) in 28.7194ms
+2026-04-02 16:19:29.262 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.SeedPro (b1)'
+2026-04-02 16:19:29.264 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7122/seed-pro?count=10&categoryId=7 - 200 null application/json; charset=utf-8 38.9426ms
+2026-04-02 16:19:30.848 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7122/seed-pro?count=10&categoryId=8 - null 0
+2026-04-02 16:19:30.852 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.SeedPro (b1)'
+2026-04-02 16:19:30.853 +07:00 [INF] Route matched with {action = "SeedPro", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SeedPro(Int32, Int32) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:19:30.865 +07:00 [INF] Nam đang thực hiện Seed 10 dữ liệu cho CategoryId 8
+2026-04-02 16:19:30.873 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Boolean), @p8='?' (Size = 4000), @p9='?' (DbType = Int32), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = Int32), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Int32), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Int32), @p19='?' (DbType = Boolean), @p20='?' (Size = 4000), @p21='?' (DbType = Int32), @p22='?' (DbType = Boolean), @p23='?' (Size = 4000), @p24='?' (DbType = Int32), @p25='?' (DbType = Boolean), @p26='?' (Size = 4000), @p27='?' (DbType = Int32), @p28='?' (DbType = Boolean), @p29='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p0, @p1, @p2)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p3, @p4, @p5)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p6, @p7, @p8)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p9, @p10, @p11)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p12, @p13, @p14)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p15, @p16, @p17)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p18, @p19, @p20)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p21, @p22, @p23)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p24, @p25, @p26)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p27, @p28, @p29)
+RETURNING `Id`;
+2026-04-02 16:19:30.883 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-02 16:19:30.886 +07:00 [INF] Executed action b1.Controllers.ToDoController.SeedPro (b1) in 31.1757ms
+2026-04-02 16:19:30.887 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.SeedPro (b1)'
+2026-04-02 16:19:30.889 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7122/seed-pro?count=10&categoryId=8 - 200 null application/json; charset=utf-8 40.8527ms
+2026-04-02 16:19:33.621 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7122/seed-pro?count=10&categoryId=12 - null 0
+2026-04-02 16:19:33.625 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.SeedPro (b1)'
+2026-04-02 16:19:33.627 +07:00 [INF] Route matched with {action = "SeedPro", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SeedPro(Int32, Int32) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:19:33.656 +07:00 [INF] Nam đang thực hiện Seed 10 dữ liệu cho CategoryId 12
+2026-04-02 16:19:33.671 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Boolean), @p8='?' (Size = 4000), @p9='?' (DbType = Int32), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = Int32), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Int32), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Int32), @p19='?' (DbType = Boolean), @p20='?' (Size = 4000), @p21='?' (DbType = Int32), @p22='?' (DbType = Boolean), @p23='?' (Size = 4000), @p24='?' (DbType = Int32), @p25='?' (DbType = Boolean), @p26='?' (Size = 4000), @p27='?' (DbType = Int32), @p28='?' (DbType = Boolean), @p29='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p0, @p1, @p2)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p3, @p4, @p5)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p6, @p7, @p8)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p9, @p10, @p11)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p12, @p13, @p14)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p15, @p16, @p17)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p18, @p19, @p20)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p21, @p22, @p23)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p24, @p25, @p26)
+RETURNING `Id`;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p27, @p28, @p29)
+RETURNING `Id`;
+2026-04-02 16:19:33.727 +07:00 [ERR] An exception occurred in the database while saving changes for context type 'b1.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`tododb`.`todoitems`, CONSTRAINT `FK_TodoItems_Categories_CategoryId` FOREIGN KEY (`CategoryId`) REFERENCES `categories` (`Id`))
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 1081
+   at MySqlConnector.Core.ResultSet.ScanRowAsync(IOBehavior ioBehavior, Row row, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ResultSet.cs:line 241
+   at MySqlConnector.Core.ResultSet.ReadAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ResultSet.cs:line 204
+   at MySqlConnector.MySqlDataReader.ReadAsync(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 39
+   at Pomelo.EntityFrameworkCore.MySql.Update.Internal.MySqlModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`tododb`.`todoitems`, CONSTRAINT `FK_TodoItems_Categories_CategoryId` FOREIGN KEY (`CategoryId`) REFERENCES `categories` (`Id`))
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 1081
+   at MySqlConnector.Core.ResultSet.ScanRowAsync(IOBehavior ioBehavior, Row row, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ResultSet.cs:line 241
+   at MySqlConnector.Core.ResultSet.ReadAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ResultSet.cs:line 204
+   at MySqlConnector.MySqlDataReader.ReadAsync(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 39
+   at Pomelo.EntityFrameworkCore.MySql.Update.Internal.MySqlModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-02 16:19:47.122 +07:00 [INF] Executed action b1.Controllers.ToDoController.SeedPro (b1) in 13493.3652ms
+2026-04-02 16:19:47.125 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.SeedPro (b1)'
+2026-04-02 16:19:47.158 +07:00 [ERR] ==> Lỗi xảy ra tại: /seed-pro | Thông điệp: An error occurred while saving the entity changes. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`tododb`.`todoitems`, CONSTRAINT `FK_TodoItems_Categories_CategoryId` FOREIGN KEY (`CategoryId`) REFERENCES `categories` (`Id`))
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 1081
+   at MySqlConnector.Core.ResultSet.ScanRowAsync(IOBehavior ioBehavior, Row row, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ResultSet.cs:line 241
+   at MySqlConnector.Core.ResultSet.ReadAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ResultSet.cs:line 204
+   at MySqlConnector.MySqlDataReader.ReadAsync(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 39
+   at Pomelo.EntityFrameworkCore.MySql.Update.Internal.MySqlModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at b1.Controllers.ToDoController.SeedPro(Int32 count, Int32 categoryId) in D:\workandlearn\visual_Net\b1\b1\Controllers\ToDoController.cs:line 143
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at b1.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\workandlearn\visual_Net\b1\b1\Middlewares\ExceptionMiddleware.cs:line 23
+2026-04-02 16:19:47.190 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7122/seed-pro?count=10&categoryId=12 - 500 null application/json 13569.762ms
+2026-04-02 16:20:21.874 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7122/add-todo - application/json 45
+2026-04-02 16:20:21.881 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.AddTodo (b1)'
+2026-04-02 16:20:21.892 +07:00 [INF] Route matched with {action = "AddTodo", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[b1.Models.TodoItem]] AddTodo(b1.DTOs.TodoCreateDto) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:20:21.963 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@__CategoryID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categories` AS `c`
+    WHERE NOT (`c`.`IsDeleted`) AND (`c`.`Id` = @__CategoryID_0))
+2026-04-02 16:20:21.974 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+INSERT INTO `TodoItems` (`CategoryId`, `IsCompleted`, `Title`)
+VALUES (@p0, @p1, @p2)
+RETURNING `Id`;
+2026-04-02 16:20:21.979 +07:00 [INF] Executing CreatedAtActionResult, writing value of type 'b1.Wrappers.ApiResponse`1[[b1.Models.TodoItem, b1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-02 16:20:22.019 +07:00 [INF] Executed action b1.Controllers.ToDoController.AddTodo (b1) in 124.8611ms
+2026-04-02 16:20:22.021 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.AddTodo (b1)'
+2026-04-02 16:20:22.023 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7122/add-todo - 201 null application/json; charset=utf-8 148.8453ms
+2026-04-02 16:20:34.575 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/todoslist - null null
+2026-04-02 16:20:34.584 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.GetallToDo (b1)'
+2026-04-02 16:20:34.595 +07:00 [INF] Route matched with {action = "GetallToDo", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetallToDo() on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:20:34.659 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`Title`, `t`.`IsCompleted`, `t`.`CategoryId`, CASE
+    WHEN `c0`.`Id` IS NOT NULL THEN `c0`.`NameCategory`
+    ELSE 'Không có'
+END AS `CategoryName`
+FROM `TodoItems` AS `t`
+LEFT JOIN (
+    SELECT `c`.`Id`, `c`.`NameCategory`
+    FROM `Categories` AS `c`
+    WHERE NOT (`c`.`IsDeleted`)
+) AS `c0` ON `t`.`CategoryId` = `c0`.`Id`
+2026-04-02 16:20:34.664 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[System.Collections.Generic.List`1[[b1.DTOs.ToDoGetDto, b1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-02 16:20:34.672 +07:00 [INF] Executed action b1.Controllers.ToDoController.GetallToDo (b1) in 74.7884ms
+2026-04-02 16:20:34.673 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.GetallToDo (b1)'
+2026-04-02 16:20:34.675 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/todoslist - 200 null application/json; charset=utf-8 100.1052ms
+2026-04-02 16:20:47.973 +07:00 [INF] Request starting HTTP/2 PUT https://localhost:7122/Update_Todo?Id=26 - null 0
+2026-04-02 16:20:47.977 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.UpdateToDo (b1)'
+2026-04-02 16:20:47.988 +07:00 [INF] Route matched with {action = "UpdateToDo", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateToDo(Int32) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:20:48.057 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoryId`, `t`.`IsCompleted`, `t`.`Title`
+FROM `TodoItems` AS `t`
+WHERE `t`.`Id` = @__p_0
+LIMIT 1
+2026-04-02 16:20:48.072 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+UPDATE `TodoItems` SET `CategoryId` = @p0, `IsCompleted` = @p1, `Title` = @p2
+WHERE `Id` = @p3;
+SELECT ROW_COUNT();
+2026-04-02 16:20:48.086 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`Title`, `t`.`IsCompleted`, `t`.`CategoryId`, CASE
+    WHEN `c0`.`Id` IS NOT NULL THEN `c0`.`NameCategory`
+    ELSE 'Không có danh mục'
+END AS `CategoryName`
+FROM `TodoItems` AS `t`
+LEFT JOIN (
+    SELECT `c`.`Id`, `c`.`NameCategory`
+    FROM `Categories` AS `c`
+    WHERE NOT (`c`.`IsDeleted`)
+) AS `c0` ON `t`.`CategoryId` = `c0`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 2
+2026-04-02 16:20:48.089 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[b1.DTOs.ToDoGetDto, b1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-02 16:20:48.092 +07:00 [INF] Executed action b1.Controllers.ToDoController.UpdateToDo (b1) in 101.6415ms
+2026-04-02 16:20:48.093 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.UpdateToDo (b1)'
+2026-04-02 16:20:48.095 +07:00 [INF] Request finished HTTP/2 PUT https://localhost:7122/Update_Todo?Id=26 - 200 null application/json; charset=utf-8 121.5772ms
+2026-04-02 16:20:51.880 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/todoslist - null null
+2026-04-02 16:20:51.883 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.GetallToDo (b1)'
+2026-04-02 16:20:51.884 +07:00 [INF] Route matched with {action = "GetallToDo", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetallToDo() on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:20:51.904 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`Title`, `t`.`IsCompleted`, `t`.`CategoryId`, CASE
+    WHEN `c0`.`Id` IS NOT NULL THEN `c0`.`NameCategory`
+    ELSE 'Không có'
+END AS `CategoryName`
+FROM `TodoItems` AS `t`
+LEFT JOIN (
+    SELECT `c`.`Id`, `c`.`NameCategory`
+    FROM `Categories` AS `c`
+    WHERE NOT (`c`.`IsDeleted`)
+) AS `c0` ON `t`.`CategoryId` = `c0`.`Id`
+2026-04-02 16:20:51.907 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[System.Collections.Generic.List`1[[b1.DTOs.ToDoGetDto, b1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-02 16:20:51.912 +07:00 [INF] Executed action b1.Controllers.ToDoController.GetallToDo (b1) in 25.2738ms
+2026-04-02 16:20:51.914 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.GetallToDo (b1)'
+2026-04-02 16:20:51.916 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/todoslist - 200 null application/json; charset=utf-8 36.0958ms
+2026-04-02 16:21:02.488 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/id?id=26 - null null
+2026-04-02 16:21:02.491 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.GetById (b1)'
+2026-04-02 16:21:02.502 +07:00 [INF] Route matched with {action = "GetById", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:21:02.517 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`Title`, `t`.`IsCompleted`, `t`.`CategoryId`, CASE
+    WHEN `c0`.`Id` IS NOT NULL THEN `c0`.`NameCategory`
+    ELSE 'Không có danh mục'
+END AS `CategoryName`
+FROM `TodoItems` AS `t`
+LEFT JOIN (
+    SELECT `c`.`Id`, `c`.`NameCategory`
+    FROM `Categories` AS `c`
+    WHERE NOT (`c`.`IsDeleted`)
+) AS `c0` ON `t`.`CategoryId` = `c0`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 2
+2026-04-02 16:21:02.520 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[b1.DTOs.ToDoGetDto, b1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-02 16:21:02.522 +07:00 [INF] Executed action b1.Controllers.ToDoController.GetById (b1) in 18.2214ms
+2026-04-02 16:21:02.523 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.GetById (b1)'
+2026-04-02 16:21:02.525 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/id?id=26 - 200 null application/json; charset=utf-8 37.4251ms
+2026-04-02 16:21:11.119 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7122/Delete_toDo?Id=26 - null null
+2026-04-02 16:21:11.131 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.DeleteToDo (b1)'
+2026-04-02 16:21:11.139 +07:00 [INF] Route matched with {action = "DeleteToDo", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteToDo(Int32) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:21:11.159 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`Title`, `t`.`IsCompleted`, `t`.`CategoryId`, CASE
+    WHEN `c0`.`Id` IS NOT NULL THEN `c0`.`NameCategory`
+    ELSE 'Không có danh mục'
+END AS `CategoryName`
+FROM `TodoItems` AS `t`
+LEFT JOIN (
+    SELECT `c`.`Id`, `c`.`NameCategory`
+    FROM `Categories` AS `c`
+    WHERE NOT (`c`.`IsDeleted`)
+) AS `c0` ON `t`.`CategoryId` = `c0`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 2
+2026-04-02 16:21:11.163 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoryId`, `t`.`IsCompleted`, `t`.`Title`
+FROM `TodoItems` AS `t`
+WHERE `t`.`Id` = @__p_0
+LIMIT 1
+2026-04-02 16:21:11.181 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+DELETE FROM `TodoItems`
+WHERE `Id` = @p0
+RETURNING 1;
+2026-04-02 16:21:11.187 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[b1.DTOs.ToDoGetDto, b1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-02 16:21:11.188 +07:00 [INF] Executed action b1.Controllers.ToDoController.DeleteToDo (b1) in 47.0305ms
+2026-04-02 16:21:11.190 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.DeleteToDo (b1)'
+2026-04-02 16:21:11.191 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7122/Delete_toDo?Id=26 - 200 null application/json; charset=utf-8 71.8551ms
+2026-04-02 16:21:15.053 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/id?id=26 - null null
+2026-04-02 16:21:15.056 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.GetById (b1)'
+2026-04-02 16:21:15.060 +07:00 [INF] Route matched with {action = "GetById", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:21:15.079 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`Title`, `t`.`IsCompleted`, `t`.`CategoryId`, CASE
+    WHEN `c0`.`Id` IS NOT NULL THEN `c0`.`NameCategory`
+    ELSE 'Không có danh mục'
+END AS `CategoryName`
+FROM `TodoItems` AS `t`
+LEFT JOIN (
+    SELECT `c`.`Id`, `c`.`NameCategory`
+    FROM `Categories` AS `c`
+    WHERE NOT (`c`.`IsDeleted`)
+) AS `c0` ON `t`.`CategoryId` = `c0`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 2
+2026-04-02 16:21:17.485 +07:00 [INF] Executed action b1.Controllers.ToDoController.GetById (b1) in 2420.3285ms
+2026-04-02 16:21:17.487 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.GetById (b1)'
+2026-04-02 16:21:17.519 +07:00 [ERR] ==> Lỗi xảy ra tại: /id | Thông điệp: Không tìm thấy ToDo với ID 26
+System.ArgumentException: Không tìm thấy ToDo với ID 26
+   at b1.ToDo.TodoService.FinByIdDtoAsync(Int32 id) in D:\workandlearn\visual_Net\b1\b1\Services\TodoService.cs:line 90
+   at b1.Controllers.ToDoController.GetById(Int32 id) in D:\workandlearn\visual_Net\b1\b1\Controllers\ToDoController.cs:line 95
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at b1.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\workandlearn\visual_Net\b1\b1\Middlewares\ExceptionMiddleware.cs:line 23
+2026-04-02 16:21:17.525 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/id?id=26 - 500 null application/json 2472.6243ms
+2026-04-02 16:21:26.608 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/category?categoryId=5 - null null
+2026-04-02 16:21:26.615 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.GetByCategorybyId (b1)'
+2026-04-02 16:21:26.627 +07:00 [INF] Route matched with {action = "GetByCategorybyId", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[b1.DTOs.ToDoGetDto]]] GetByCategorybyId(Int32) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:21:26.651 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__categoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`Title`, `t`.`IsCompleted`, `t`.`CategoryId`, CASE
+    WHEN `c0`.`Id` IS NOT NULL THEN `c0`.`NameCategory`
+    ELSE 'Không có danh mục'
+END AS `CategoryName`
+FROM `TodoItems` AS `t`
+LEFT JOIN (
+    SELECT `c`.`Id`, `c`.`NameCategory`
+    FROM `Categories` AS `c`
+    WHERE NOT (`c`.`IsDeleted`)
+) AS `c0` ON `t`.`CategoryId` = `c0`.`Id`
+WHERE `t`.`CategoryId` = @__categoryId_0
+2026-04-02 16:21:35.782 +07:00 [INF] Executed action b1.Controllers.ToDoController.GetByCategorybyId (b1) in 9153.3958ms
+2026-04-02 16:21:35.787 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.GetByCategorybyId (b1)'
+2026-04-02 16:21:35.816 +07:00 [ERR] ==> Lỗi xảy ra tại: /category | Thông điệp: không tìm thấy to nào trong category này
+System.Collections.Generic.KeyNotFoundException: không tìm thấy to nào trong category này
+   at b1.Controllers.ToDoController.GetByCategorybyId(Int32 categoryId) in D:\workandlearn\visual_Net\b1\b1\Controllers\ToDoController.cs:line 108
+   at lambda_method193(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at b1.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\workandlearn\visual_Net\b1\b1\Middlewares\ExceptionMiddleware.cs:line 23
+2026-04-02 16:21:35.822 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/category?categoryId=5 - 500 null application/json 9213.893ms
+2026-04-02 16:21:40.756 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/category?categoryId=6 - null null
+2026-04-02 16:21:40.759 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.GetByCategorybyId (b1)'
+2026-04-02 16:21:40.766 +07:00 [INF] Route matched with {action = "GetByCategorybyId", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[b1.DTOs.ToDoGetDto]]] GetByCategorybyId(Int32) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:21:40.782 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__categoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`Title`, `t`.`IsCompleted`, `t`.`CategoryId`, CASE
+    WHEN `c0`.`Id` IS NOT NULL THEN `c0`.`NameCategory`
+    ELSE 'Không có danh mục'
+END AS `CategoryName`
+FROM `TodoItems` AS `t`
+LEFT JOIN (
+    SELECT `c`.`Id`, `c`.`NameCategory`
+    FROM `Categories` AS `c`
+    WHERE NOT (`c`.`IsDeleted`)
+) AS `c0` ON `t`.`CategoryId` = `c0`.`Id`
+WHERE `t`.`CategoryId` = @__categoryId_0
+2026-04-02 16:21:40.785 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[System.Collections.Generic.List`1[[b1.DTOs.ToDoGetDto, b1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-02 16:21:40.786 +07:00 [INF] Executed action b1.Controllers.ToDoController.GetByCategorybyId (b1) in 17.7079ms
+2026-04-02 16:21:40.788 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.GetByCategorybyId (b1)'
+2026-04-02 16:21:40.789 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/category?categoryId=6 - 200 null application/json; charset=utf-8 33.3674ms
+2026-04-02 16:21:50.952 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/pagination?search=%C4%83n&sortBy=id&isDesc=false&page=1&size=10 - null null
+2026-04-02 16:21:50.958 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.GetPaged (b1)'
+2026-04-02 16:21:50.969 +07:00 [INF] Route matched with {action = "GetPaged", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[b1.DTOs.ToDoGetDto]]] GetPaged(System.String, System.String, Boolean, Int32, Int32) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:21:51.013 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__Format_1='?' (Size = 4000), @__p_3='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`Title`, `t`.`IsCompleted`, `t`.`CategoryId`, CASE
+    WHEN `c0`.`Id` IS NOT NULL THEN `c0`.`NameCategory`
+    ELSE 'Không có danh mục'
+END AS `CategoryName`
+FROM `TodoItems` AS `t`
+LEFT JOIN (
+    SELECT `c`.`Id`, `c`.`NameCategory`
+    FROM `Categories` AS `c`
+    WHERE NOT (`c`.`IsDeleted`)
+) AS `c0` ON `t`.`CategoryId` = `c0`.`Id`
+WHERE (`t`.`Title` COLLATE utf8mb4_bin LIKE @__Format_1) OR (`c0`.`NameCategory` COLLATE utf8mb4_bin LIKE @__Format_1)
+ORDER BY `t`.`Id`
+LIMIT @__p_3 OFFSET @__p_2
+2026-04-02 16:22:04.072 +07:00 [INF] Executed action b1.Controllers.ToDoController.GetPaged (b1) in 13100.2509ms
+2026-04-02 16:22:04.075 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.GetPaged (b1)'
+2026-04-02 16:22:04.104 +07:00 [ERR] ==> Lỗi xảy ra tại: /pagination | Thông điệp: không có trang 1
+System.Exception: không có trang 1
+   at b1.ToDo.TodoService.GetPagedTodosAsync(String searchTerm, String sortBy, Boolean isDescending, Int32 pageNumber, Int32 pageSize) in D:\workandlearn\visual_Net\b1\b1\Services\TodoService.cs:line 140
+   at b1.Controllers.ToDoController.GetPaged(String search, String sortBy, Boolean isDesc, Int32 page, Int32 size) in D:\workandlearn\visual_Net\b1\b1\Controllers\ToDoController.cs:line 123
+   at lambda_method204(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at b1.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\workandlearn\visual_Net\b1\b1\Middlewares\ExceptionMiddleware.cs:line 23
+2026-04-02 16:22:04.109 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/pagination?search=%C4%83n&sortBy=id&isDesc=false&page=1&size=10 - 500 null application/json 13157.0471ms
+2026-04-02 16:22:20.829 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/pagination?search=Non&sortBy=id&isDesc=false&page=1&size=10 - null null
+2026-04-02 16:22:20.833 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.GetPaged (b1)'
+2026-04-02 16:22:20.835 +07:00 [INF] Route matched with {action = "GetPaged", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[b1.DTOs.ToDoGetDto]]] GetPaged(System.String, System.String, Boolean, Int32, Int32) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:22:20.851 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__Format_1='?' (Size = 4000), @__p_3='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`Title`, `t`.`IsCompleted`, `t`.`CategoryId`, CASE
+    WHEN `c0`.`Id` IS NOT NULL THEN `c0`.`NameCategory`
+    ELSE 'Không có danh mục'
+END AS `CategoryName`
+FROM `TodoItems` AS `t`
+LEFT JOIN (
+    SELECT `c`.`Id`, `c`.`NameCategory`
+    FROM `Categories` AS `c`
+    WHERE NOT (`c`.`IsDeleted`)
+) AS `c0` ON `t`.`CategoryId` = `c0`.`Id`
+WHERE (`t`.`Title` COLLATE utf8mb4_bin LIKE @__Format_1) OR (`c0`.`NameCategory` COLLATE utf8mb4_bin LIKE @__Format_1)
+ORDER BY `t`.`Id`
+LIMIT @__p_3 OFFSET @__p_2
+2026-04-02 16:22:20.854 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[System.Collections.Generic.List`1[[b1.DTOs.ToDoGetDto, b1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-02 16:22:20.856 +07:00 [INF] Executed action b1.Controllers.ToDoController.GetPaged (b1) in 18.3598ms
+2026-04-02 16:22:20.857 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.GetPaged (b1)'
+2026-04-02 16:22:20.858 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/pagination?search=Non&sortBy=id&isDesc=false&page=1&size=10 - 200 null application/json; charset=utf-8 28.9825ms
+2026-04-02 16:22:25.989 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/pagination?search=Non&sortBy=id&isDesc=false&page=2&size=10 - null null
+2026-04-02 16:22:25.994 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.GetPaged (b1)'
+2026-04-02 16:22:25.996 +07:00 [INF] Route matched with {action = "GetPaged", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[b1.DTOs.ToDoGetDto]]] GetPaged(System.String, System.String, Boolean, Int32, Int32) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:22:26.025 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__Format_1='?' (Size = 4000), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`Title`, `t`.`IsCompleted`, `t`.`CategoryId`, CASE
+    WHEN `c0`.`Id` IS NOT NULL THEN `c0`.`NameCategory`
+    ELSE 'Không có danh mục'
+END AS `CategoryName`
+FROM `TodoItems` AS `t`
+LEFT JOIN (
+    SELECT `c`.`Id`, `c`.`NameCategory`
+    FROM `Categories` AS `c`
+    WHERE NOT (`c`.`IsDeleted`)
+) AS `c0` ON `t`.`CategoryId` = `c0`.`Id`
+WHERE (`t`.`Title` COLLATE utf8mb4_bin LIKE @__Format_1) OR (`c0`.`NameCategory` COLLATE utf8mb4_bin LIKE @__Format_1)
+ORDER BY `t`.`Id`
+LIMIT @__p_2 OFFSET @__p_2
+2026-04-02 16:22:27.633 +07:00 [INF] Executed action b1.Controllers.ToDoController.GetPaged (b1) in 1626.9382ms
+2026-04-02 16:22:27.635 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.GetPaged (b1)'
+2026-04-02 16:22:27.663 +07:00 [ERR] ==> Lỗi xảy ra tại: /pagination | Thông điệp: không có trang 2
+System.Exception: không có trang 2
+   at b1.ToDo.TodoService.GetPagedTodosAsync(String searchTerm, String sortBy, Boolean isDescending, Int32 pageNumber, Int32 pageSize) in D:\workandlearn\visual_Net\b1\b1\Services\TodoService.cs:line 140
+   at b1.Controllers.ToDoController.GetPaged(String search, String sortBy, Boolean isDesc, Int32 page, Int32 size) in D:\workandlearn\visual_Net\b1\b1\Controllers\ToDoController.cs:line 123
+   at lambda_method204(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at b1.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\workandlearn\visual_Net\b1\b1\Middlewares\ExceptionMiddleware.cs:line 23
+2026-04-02 16:22:27.669 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/pagination?search=Non&sortBy=id&isDesc=false&page=2&size=10 - 500 null application/json 1679.9316ms
+2026-04-02 16:22:36.066 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/pagination?sortBy=id&isDesc=false&page=4&size=10 - null null
+2026-04-02 16:22:36.070 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.GetPaged (b1)'
+2026-04-02 16:22:36.072 +07:00 [INF] Route matched with {action = "GetPaged", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[b1.DTOs.ToDoGetDto]]] GetPaged(System.String, System.String, Boolean, Int32, Int32) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 16:22:36.111 +07:00 [INF] Executed DbCommand (18ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t0`.`Id`, `t0`.`Title`, `t0`.`IsCompleted`, `t0`.`CategoryId`, CASE
+    WHEN `c0`.`Id` IS NOT NULL THEN `c0`.`NameCategory`
+    ELSE 'Không có danh mục'
+END AS `CategoryName`
+FROM (
+    SELECT `t`.`Id`, `t`.`CategoryId`, `t`.`IsCompleted`, `t`.`Title`
+    FROM `TodoItems` AS `t`
+    ORDER BY `t`.`Id`
+    LIMIT @__p_1 OFFSET @__p_0
+) AS `t0`
+LEFT JOIN (
+    SELECT `c`.`Id`, `c`.`NameCategory`
+    FROM `Categories` AS `c`
+    WHERE NOT (`c`.`IsDeleted`)
+) AS `c0` ON `t0`.`CategoryId` = `c0`.`Id`
+ORDER BY `t0`.`Id`
+2026-04-02 16:22:36.115 +07:00 [INF] Executing OkObjectResult, writing value of type 'b1.Wrappers.ApiResponse`1[[System.Collections.Generic.List`1[[b1.DTOs.ToDoGetDto, b1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-02 16:22:36.117 +07:00 [INF] Executed action b1.Controllers.ToDoController.GetPaged (b1) in 41.7811ms
+2026-04-02 16:22:36.119 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.GetPaged (b1)'
+2026-04-02 16:22:36.121 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/pagination?sortBy=id&isDesc=false&page=4&size=10 - 200 null application/json; charset=utf-8 54.9913ms
+2026-04-02 17:29:04.429 +07:00 [INF] Now listening on: https://localhost:7122
+2026-04-02 17:29:04.460 +07:00 [INF] Now listening on: http://localhost:5288
+2026-04-02 17:29:04.615 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-02 17:29:04.617 +07:00 [INF] Hosting environment: Development
+2026-04-02 17:29:04.619 +07:00 [INF] Content root path: D:\workandlearn\visual_Net\b1\b1
+2026-04-02 17:29:05.066 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/index.html - null null
+2026-04-02 17:29:05.415 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/index.html - 304 null null 358.5532ms
+2026-04-02 17:29:05.440 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/swagger-ui.css - null null
+2026-04-02 17:29:05.440 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/swagger-ui-bundle.js - null null
+2026-04-02 17:29:05.440 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-02 17:29:05.440 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/swagger-ui-standalone-preset.js - null null
+2026-04-02 17:29:05.440 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/index.js - null null
+2026-04-02 17:29:05.440 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/index.css - null null
+2026-04-02 17:29:05.521 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/_framework/aspnetcore-browser-refresh.js - 200 14909 application/javascript; charset=utf-8 80.9536ms
+2026-04-02 17:29:05.522 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/index.js - 304 null null 82.1838ms
+2026-04-02 17:29:05.524 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/swagger-ui-bundle.js - 304 null null 84.6824ms
+2026-04-02 17:29:05.524 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/swagger-ui.css - 304 null null 84.6861ms
+2026-04-02 17:29:05.524 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/swagger-ui-standalone-preset.js - 304 null null 84.1391ms
+2026-04-02 17:29:05.526 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/index.css - 304 null null 86.6866ms
+2026-04-02 17:29:05.530 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/_vs/browserLink - null null
+2026-04-02 17:29:05.661 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/_vs/browserLink - 200 null text/javascript; charset=UTF-8 131.3678ms
+2026-04-02 17:29:05.690 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/openapi/v1.json - null null
+2026-04-02 17:29:05.704 +07:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-04-02 17:29:05.732 +07:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-04-02 17:29:05.736 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/openapi/v1.json - 200 null application/json;charset=utf-8 45.213ms
+2026-04-02 17:29:13.498 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/todoslist - null null
+2026-04-02 17:29:13.504 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.GetallToDo (b1)'
+2026-04-02 17:29:13.564 +07:00 [INF] Route matched with {action = "GetallToDo", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetallToDo() on controller b1.Controllers.ToDoController (b1).
+2026-04-02 17:29:14.602 +07:00 [INF] Executed action b1.Controllers.ToDoController.GetallToDo (b1) in 1028.4931ms
+2026-04-02 17:29:14.606 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.GetallToDo (b1)'
+2026-04-02 17:29:14.654 +07:00 [ERR] ==> Lỗi xảy ra tại: /todoslist | Thông điệp: Method not found: 'Void AutoMapper.MapperConfiguration..ctor(AutoMapper.MapperConfigurationExpression)'.
+System.MissingMethodException: Method not found: 'Void AutoMapper.MapperConfiguration..ctor(AutoMapper.MapperConfigurationExpression)'.
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_2(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_2(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_3(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method8(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at b1.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\workandlearn\visual_Net\b1\b1\Middlewares\ExceptionMiddleware.cs:line 23
+2026-04-02 17:29:14.726 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/todoslist - 500 null application/json 1228.08ms
+2026-04-02 17:29:47.518 +07:00 [INF] Now listening on: https://localhost:7122
+2026-04-02 17:29:47.562 +07:00 [INF] Now listening on: http://localhost:5288
+2026-04-02 17:29:47.807 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-02 17:29:47.809 +07:00 [INF] Hosting environment: Development
+2026-04-02 17:29:47.811 +07:00 [INF] Content root path: D:\workandlearn\visual_Net\b1\b1
+2026-04-02 17:29:48.131 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/index.html - null null
+2026-04-02 17:29:48.313 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/index.html - 304 null null 188.7211ms
+2026-04-02 17:29:48.338 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/index.css - null null
+2026-04-02 17:29:48.338 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/index.js - null null
+2026-04-02 17:29:48.338 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/swagger-ui-bundle.js - null null
+2026-04-02 17:29:48.363 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/index.js - 304 null null 24.6038ms
+2026-04-02 17:29:48.338 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/swagger-ui.css - null null
+2026-04-02 17:29:48.338 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-02 17:29:48.338 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/swagger/swagger-ui-standalone-preset.js - null null
+2026-04-02 17:29:48.338 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/_vs/browserLink - null null
+2026-04-02 17:29:48.432 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/swagger-ui.css - 304 null null 95.0833ms
+2026-04-02 17:29:48.432 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/swagger-ui-bundle.js - 304 null null 95.0568ms
+2026-04-02 17:29:48.433 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/index.css - 304 null null 95.0508ms
+2026-04-02 17:29:48.452 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/_framework/aspnetcore-browser-refresh.js - 200 14909 application/javascript; charset=utf-8 114.5513ms
+2026-04-02 17:29:48.447 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/swagger/swagger-ui-standalone-preset.js - 304 null null 109.6725ms
+2026-04-02 17:29:48.501 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/_vs/browserLink - 200 null text/javascript; charset=UTF-8 162.9939ms
+2026-04-02 17:29:48.545 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/openapi/v1.json - null null
+2026-04-02 17:29:48.554 +07:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-04-02 17:29:48.571 +07:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-04-02 17:29:48.575 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/openapi/v1.json - 200 null application/json;charset=utf-8 30.8304ms
+2026-04-02 17:30:03.452 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7122/id?id=10 - null null
+2026-04-02 17:30:03.457 +07:00 [INF] Executing endpoint 'b1.Controllers.ToDoController.GetById (b1)'
+2026-04-02 17:30:03.512 +07:00 [INF] Route matched with {action = "GetById", controller = "ToDo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller b1.Controllers.ToDoController (b1).
+2026-04-02 17:30:03.834 +07:00 [INF] Executed action b1.Controllers.ToDoController.GetById (b1) in 313.8309ms
+2026-04-02 17:30:03.838 +07:00 [INF] Executed endpoint 'b1.Controllers.ToDoController.GetById (b1)'
+2026-04-02 17:30:03.869 +07:00 [ERR] ==> Lỗi xảy ra tại: /id | Thông điệp: Method not found: 'Void AutoMapper.MapperConfiguration..ctor(AutoMapper.MapperConfigurationExpression)'.
+System.MissingMethodException: Method not found: 'Void AutoMapper.MapperConfiguration..ctor(AutoMapper.MapperConfigurationExpression)'.
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_2(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_2(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_3(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method8(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at b1.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\workandlearn\visual_Net\b1\b1\Middlewares\ExceptionMiddleware.cs:line 23
+2026-04-02 17:30:03.916 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7122/id?id=10 - 500 null application/json 463.8881ms

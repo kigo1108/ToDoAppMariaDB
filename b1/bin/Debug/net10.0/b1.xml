@@ -17,7 +17,12 @@
         </member>
         <member name="M:b1.Controllers.CategoryController.GetAllCategory">
             <summary>
-            hiển thị tất cả danh sách catergory
+            Hiển thị Danh sách CateGort có kèm công việc bên trong
+            </summary>
+        </member>
+        <member name="M:b1.Controllers.CategoryController.GetAllCategoryNoTodo">
+            <summary>
+            Hiển thị Danh sách CateGort không kèm công việc bên trong
             </summary>
         </member>
         <member name="M:b1.Controllers.ToDoController.AddTodo(b1.DTOs.TodoCreateDto)">

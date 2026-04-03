@@ -1,9 +1,17 @@
 {
-  "openapi": "3.0.4",
+  "openapi": "3.1.1",
   "info": {
-    "title": "b1",
-    "version": "1.0"
+    "title": "b1 | v1",
+    "version": "1.0.0"
   },
+  "servers": [
+    {
+      "url": "https://localhost:7122"
+    },
+    {
+      "url": "http://localhost:5288"
+    }
+  ],
   "paths": {
     "/Add_Category": {
       "post": {
@@ -12,6 +20,7 @@
         ],
         "summary": "Them danh muc moi vao danh sach cac danh muc",
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -28,7 +37,8 @@
                 "$ref": "#/components/schemas/CategoryCreateDto"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -48,7 +58,11 @@
             "name": "Id",
             "in": "query",
             "schema": {
-              "type": "integer",
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
               "format": "int32"
             }
           }
@@ -65,7 +79,7 @@
         "tags": [
           "Category"
         ],
-        "summary": "hiển thị tất cả danh sách catergory",
+        "summary": "Hiển thị Danh sách CateGort có kèm công việc bên trong",
         "responses": {
           "200": {
             "description": "OK",
@@ -91,6 +105,45 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/CategoryGetDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GetAllCategoryNoTodo": {
+      "get": {
+        "tags": [
+          "Category"
+        ],
+        "summary": "Hiển thị Danh sách CateGort không kèm công việc bên trong",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Category"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Category"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Category"
                   }
                 }
               }
@@ -122,11 +175,12 @@
                 "$ref": "#/components/schemas/TodoCreateDto"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "",
             "content": {
               "text/plain": {
                 "schema": {
@@ -156,7 +210,7 @@
         "summary": "Hien thi danh sach tat ca cong viec can lam",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": ""
           }
         }
       }
@@ -173,14 +227,18 @@
             "in": "query",
             "description": "",
             "schema": {
-              "type": "integer",
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
               "format": "int32"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": ""
           }
         }
       }
@@ -197,14 +255,18 @@
             "in": "query",
             "description": "",
             "schema": {
-              "type": "integer",
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
               "format": "int32"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": ""
           }
         }
       }
@@ -221,14 +283,18 @@
             "in": "query",
             "description": "",
             "schema": {
-              "type": "integer",
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
               "format": "int32"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": ""
           }
         }
       }
@@ -244,7 +310,11 @@
             "name": "categoryId",
             "in": "query",
             "schema": {
-              "type": "integer",
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
               "format": "int32"
             }
           }
@@ -316,7 +386,11 @@
             "name": "page",
             "in": "query",
             "schema": {
-              "type": "integer",
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
               "format": "int32",
               "default": 1
             }
@@ -325,7 +399,11 @@
             "name": "size",
             "in": "query",
             "schema": {
-              "type": "integer",
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
               "format": "int32",
               "default": 10
             }
@@ -375,7 +453,11 @@
             "name": "count",
             "in": "query",
             "schema": {
-              "type": "integer",
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
               "format": "int32",
               "default": 50
             }
@@ -384,7 +466,11 @@
             "name": "categoryId",
             "in": "query",
             "schema": {
-              "type": "integer",
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
               "format": "int32",
               "default": 1
             }
@@ -488,12 +574,18 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
             "format": "int32"
           },
           "nameCategory": {
-            "type": "string",
-            "nullable": true
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "isDeleted": {
             "type": "boolean"
@@ -502,107 +594,127 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/TodoItem"
-            },
-            "nullable": true
+            }
           }
-        },
-        "additionalProperties": false
+        }
       },
       "CategoryCreateDto": {
         "type": "object",
         "properties": {
           "nameCategory": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "CategoryGetDto": {
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
             "format": "int32"
           },
           "nameCategory": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "toDoItems": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ToDoGetDto"
-            },
-            "nullable": true
+            }
           }
-        },
-        "additionalProperties": false
-      },
-      "ToDoGetDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "isCompleted": {
-            "type": "boolean"
-          },
-          "categoryId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "categoryName": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        }
       },
       "TodoCreateDto": {
         "type": "object",
         "properties": {
           "title": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "categoryId": {
-            "type": "integer",
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
             "format": "int32"
           }
-        },
-        "additionalProperties": false
+        }
       },
-      "TodoItem": {
+      "ToDoGetDto": {
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
             "format": "int32"
           },
           "title": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "isCompleted": {
             "type": "boolean"
           },
           "categoryId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "null",
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "categoryName": {
+            "type": "string"
+          }
+        }
+      },
+      "TodoItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "title": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "isCompleted": {
+            "type": "boolean"
+          },
+          "categoryId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "null",
+              "integer",
+              "string"
+            ],
+            "format": "int32"
           },
           "category": {
-            "$ref": "#/components/schemas/Category"
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/Category"
+              }
+            ]
           }
-        },
-        "additionalProperties": false
+        }
       }
     }
   },

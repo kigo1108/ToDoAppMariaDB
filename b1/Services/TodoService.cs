@@ -1,4 +1,6 @@
-﻿using b1.Data;
+﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using b1.Data;
 using b1.Models;
 using b1.Wrappers;
 using Microsoft.EntityFrameworkCore;
@@ -9,10 +11,12 @@ namespace b1.ToDo
     {
         private readonly AppDbContext _appDbContext;
         private readonly ICategoryService _categoryService;
-        public TodoService(AppDbContext appDbContext, ICategoryService category)
+        private readonly IMapper _mapper;
+        public TodoService(AppDbContext appDbContext, ICategoryService category, IMapper mapper)
         {
             _appDbContext = appDbContext;
             _categoryService = category;
+            _mapper = mapper;
         }
         public async Task<TodoItem> AddTodoAsync(TodoItem? item)
         {
@@ -38,31 +42,32 @@ namespace b1.ToDo
         //xóa todo
         public async Task<ToDoGetDto> DeleteToDo(int Id)
         {
-            var dtoTOdo = await FinByIdDtoAsync(Id);
             var todo = await FindById(Id);
             _appDbContext.TodoItems.Remove(todo);
             await _appDbContext.SaveChangesAsync();
-            return dtoTOdo;
+            return _mapper.Map<ToDoGetDto>(todo);
         }
 
         public async Task<List<ToDoGetDto>> GetAllTodosDtoAsync()
         {
             // Chúng ta truyền cả DbSet vào hàm Map, SQL sẽ chỉ SELECT những cột có trong DTO
-            return await MapTodoToDto(_appDbContext.TodoItems).ToListAsync();
+            //return await MapTodoToDto(_appDbContext.TodoItems).ToListAsync();
+            var todos = await _appDbContext.TodoItems.Include(t => t.Category).ToListAsync();
+            return _mapper.Map<List<ToDoGetDto>>(todos);
         }
         //hàm công thức cách mapping từ TodoItem sang ToDoGetDto
-        private IQueryable<ToDoGetDto> MapTodoToDto(IQueryable<TodoItem> query)
-        {
-            return query.Select(t => new ToDoGetDto
-            {
-                Id = t.Id,
-                Title = t.Title,
-                IsCompleted = t.IsCompleted,
-                CategoryId = t.CategoryId,
-                // Sử dụng toán tử điều kiện để tránh lỗi Null nếu Category chưa được nạp
-                CategoryName = t.Category != null ? t.Category.NameCategory : "Không có danh mục"
-            });
-        }
+        //private IQueryable<ToDoGetDto> MapTodoToDto(IQueryable<TodoItem> query)
+        //{
+        //    return query.Select(t => new ToDoGetDto
+        //    {
+        //        Id = t.Id,
+        //        Title = t.Title,
+        //        IsCompleted = t.IsCompleted,
+        //        CategoryId = t.CategoryId,
+        //        // Sử dụng toán tử điều kiện để tránh lỗi Null nếu Category chưa được nạp
+        //        CategoryName = t.Category != null ? t.Category.NameCategory : "Không có danh mục"
+        //    });
+        //}
         //đánh dấu hoàn thành
         public async Task<ToDoGetDto> MarkComple(int Id)
         {
@@ -79,31 +84,22 @@ namespace b1.ToDo
         //find by categoryId trả về DTO
         public async Task<List<ToDoGetDto>> GetByCategoryIdDtoAsync(int categoryId)
         {
-            var query = _appDbContext.TodoItems.Where(t => t.CategoryId == categoryId);
-            return await MapTodoToDto(query).ToListAsync();
+            var items = _appDbContext.TodoItems.Where(t => t.CategoryId == categoryId);
+            return _mapper.Map <List<ToDoGetDto>>(items);
         }
 
         //find by id trả về DTO
         public async Task<ToDoGetDto> FinByIdDtoAsync(int id)
         {
-            var query = _appDbContext.TodoItems.Where(t => t.Id == id);
-            return await MapTodoToDto(query).SingleOrDefaultAsync() ?? throw new ArgumentException($"Không tìm thấy ToDo với ID {id}");
+            var item = await _appDbContext.TodoItems
+        .Include(t => t.Category) // Đừng quên Include để lấy tên Category nhé
+        .FirstOrDefaultAsync(t => t.Id == id);
+
+            if (item == null) throw new ArgumentException($"Không tìm thấy ToDo với ID {id}");
+            return _mapper.Map<ToDoGetDto>(item);
         }
 
-        //public async Task<List<ToDoGetDto>> GetPagedTodosAsync(int pageNumber, int pageSize)
-        //{
-        //    if (pageNumber < 1)
-        //    {
-        //        pageNumber = 1;
-        //    }
-        //    var query = _appDbContext.TodoItems.AsQueryable();
-        //    var dtoQuery = MapTodoToDto(query);
-        //    return await dtoQuery
-        //        .Skip((pageNumber - 1) * pageSize)
-        //        .Take(pageSize)
-        //        .ToListAsync();
-        //}
-
+        
         public async Task<List<ToDoGetDto>> GetPagedTodosAsync(string? searchTerm, string? sortBy, bool isDescending, int pageNumber, int pageSize)
         {
             var query = _appDbContext.TodoItems.AsQueryable();
@@ -129,17 +125,25 @@ namespace b1.ToDo
             }
 
             // 3. Áp dụng khuôn DTO và Phân trang (Tận dụng hàm Map đã có của Nam)
-            var dtoQuery = MapTodoToDto(query);
+            //var dtoQuery = MapTodoToDto(query);
 
-            var page =await dtoQuery
+
+            //var pageItems =await query
+            //    .Include(t=>t.Category)
+            //    .Skip((pageNumber - 1) * pageSize)
+            //    .Take(pageSize)
+            //    .ToListAsync();
+            var result = await query
+                .ProjectTo<ToDoGetDto>(_mapper.ConfigurationProvider)
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
-            if(!page.Any())
+            if (!result.Any())
             {
                 throw new Exception($"không có trang {pageNumber}");
             }
-            return page;
+
+            return result;
         }
     }
 }

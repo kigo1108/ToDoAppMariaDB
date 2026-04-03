@@ -19,9 +19,9 @@ namespace b1.Controllers
         [HttpPost("Add_Category")]
         public async Task<IActionResult> AddCategory(CategoryCreateDto categoryCreate)
         {
-            
-            var cate = await _categoryService.AddCategoryAsync(categoryCreate.NameCategory);
-            return Ok(ApiResponse<Category>.SuccessResponse(cate,"thêm thành công"));
+
+            var cate = await _categoryService.AddCategoryAsync(categoryCreate);
+            return Ok(ApiResponse<Category>.SuccessResponse(cate, "thêm thành công"));
         }
 
         /// <summary>
@@ -35,13 +35,23 @@ namespace b1.Controllers
         }
 
         /// <summary>
-        /// hiển thị tất cả danh sách catergory
+        /// Hiển thị Danh sách CateGort có kèm công việc bên trong
         /// </summary>
         [HttpGet("GetAllCategory")]
         public async Task<ActionResult<List<CategoryGetDto>>> GetAllCategory()
         {
             var categories = await _categoryService.GetAllCategoriesAsync();
-            return Ok(ApiResponse<List<CategoryGetDto>>.SuccessResponse(categories,"hiện thành công"));
+            return Ok(ApiResponse<List<CategoryGetDto>>.SuccessResponse(categories, "hiện thành công"));
+        }
+
+        /// <summary>
+        /// Hiển thị Danh sách CateGort không kèm công việc bên trong
+        /// </summary>
+        [HttpGet("GetAllCategoryNoTodo")]
+        public async Task<ActionResult<List<Category>>> GetAllCategoryNoTodo()
+        {
+            var categories = await _categoryService.GetAllCategoriesNoTodoAsync();
+            return Ok(ApiResponse<List<Category>>.SuccessResponse(categories, "hiện thành công"));
         }
     }
 }

@@ -16,7 +16,7 @@
                 Data = data,
             };
         }
-        public static ApiResponse<T> ErrorResponse(List<string> errors, string? message = "Đã xảy ra lỗi")
+        public static ApiResponse<T> ErrorResponse(List<string>? errors, string? message = "Đã xảy ra lỗi")
         {
             return new ApiResponse<T>
             {

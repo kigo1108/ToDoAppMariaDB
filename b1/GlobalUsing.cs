@@ -4,3 +4,6 @@ global using Microsoft.EntityFrameworkCore;
 global using Microsoft.AspNetCore.Mvc;
 global using b1.DTOs;
 global using b1.Validators.Todo;
+global using b1.Validators.Category;
+global using FluentValidation;
+global using FluentValidation.AspNetCore;

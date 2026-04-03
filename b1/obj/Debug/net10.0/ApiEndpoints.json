@@ -120,6 +120,26 @@
     ]
   },
   {
+    "ContainingType": "b1.Controllers.CategoryController",
+    "Method": "GetAllCategoryNoTodo",
+    "RelativePath": "GetAllCategoryNoTodo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[b1.Models.Category, b1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "b1.Controllers.ToDoController",
     "Method": "GetById",
     "RelativePath": "id",

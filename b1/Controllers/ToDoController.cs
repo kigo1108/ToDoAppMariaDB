@@ -1,5 +1,7 @@
 ﻿
 
+using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using b1.Data;
 using b1.Wrappers;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -12,10 +14,12 @@ namespace b1.Controllers
     {
         private readonly ITodoService _itodoService;
         private readonly AppDbContext _appDbContext;
-        public ToDoController(ITodoService itodoService, AppDbContext appDbContext)
+        private readonly IMapper _mapper;
+        public ToDoController(ITodoService itodoService, AppDbContext appDbContext, IMapper mapper)
         {
             _itodoService = itodoService;
             _appDbContext = appDbContext;
+            _mapper=mapper;
         }
         /// <summary>
         /// Them cong viec moi vao danh sach viec can lam
@@ -28,11 +32,7 @@ namespace b1.Controllers
             //{
             //    return BadRequest("Title cannot be null");
             //}
-            var item = new TodoItem
-            {
-                Title = dto.Title,
-                CategoryId = dto.CategoryId
-            };
+            var item = _mapper.Map<TodoItem>(dto);
             var CreatedItem = await _itodoService.AddTodoAsync(item);
             return CreatedAtAction(nameof(GetById), new { id = CreatedItem.Id },
         ApiResponse<TodoItem>.SuccessResponse(CreatedItem, "Thêm mới thành công"));
@@ -46,17 +46,10 @@ namespace b1.Controllers
         [HttpGet("todoslist")]
         public async Task<IActionResult> GetallToDo()
         {
-            var data= await _appDbContext.TodoItems
-                .Select(t => new ToDoGetDto
-                {
-                    Id = t.Id,
-                    Title = t.Title,
-                    IsCompleted = t.IsCompleted,
-                    CategoryId = t.CategoryId,
-                    CategoryName = t.Category != null ? t.Category.NameCategory : "Không có"
-
-                })
-                .ToListAsync();
+            //var data= await _appDbContext.TodoItems
+            //    .ProjectTo<ToDoGetDto>(_mapper.ConfigurationProvider)
+            //    .ToListAsync();
+            var data= await _itodoService.GetAllTodosDtoAsync();
             return Ok(ApiResponse<List<ToDoGetDto>>.SuccessResponse(data, "Lấy danh sách thành công"));
 
         }
