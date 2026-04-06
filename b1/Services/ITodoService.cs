@@ -7,8 +7,8 @@ namespace b1.ToDo
 
         Task <ToDoGetDto>DeleteToDo(int Id);
         Task <ToDoGetDto> MarkComple(int Id);
-        Task<TodoItem> AddTodoAsync(TodoItem? item);
-        Task<ToDoGetDto> FinByIdDtoAsync(int Id);
+        Task<ToDoGetDto> AddTodoAsync(TodoCreateDto? item);
+        Task<ToDoGetDto?> FinByIdDtoAsync(int Id);
         Task<List<ToDoGetDto>> GetAllTodosDtoAsync(); // Trả về DTO
         Task<List<ToDoGetDto>> GetByCategoryIdDtoAsync(int categoryId); // Trả về DTO
 

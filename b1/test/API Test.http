@@ -1,0 +1,9 @@
+﻿@hostname = https://localhost:7122
+@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoia2lnbyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IiIsImV4cCI6MTc3NTUzNTg2Mn0.hbVfGlZEc6gu9zqPqDJ-IfTpDRRTGCAjyJArTztUh4cThNXFUGiVtOQAPAfu0iSqmpJTmd9rTMYt8SqiIoFwjg
+
+### Test Add Todo (Phải có Token mới chạy được)
+get {{hostname}}/todolist
+Authorization: Bearer {{token}}
+
+### Test Add Todo (Phải có Token mới chạy được)
+get {{hostname}}/Login?Username=kigo&Password=123456S

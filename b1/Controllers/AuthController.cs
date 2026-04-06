@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace b1.Controllers
 {
+
     public class AuthController : Controller
     {
         private readonly IAuthService _authService;

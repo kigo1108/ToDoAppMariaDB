@@ -13,6 +13,7 @@ namespace b1.Extensions
             // Cấu hình FluentValidation
             services.AddFluentValidationAutoValidation();
             services.AddValidatorsFromAssemblyContaining<TodoCreateDtoValidator>();
+            services.AddHttpContextAccessor();
             return services;
         }
     }

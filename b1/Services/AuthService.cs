@@ -25,7 +25,8 @@ namespace b1.Services
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.userName)
+                new Claim(ClaimTypes.Name, user.userName),
+                new Claim(ClaimTypes.Role, user.UserRole)
             };
             // lấy Token từ appsettings.jsona
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetSection("AppSettings:Token").Value!));

@@ -4,6 +4,7 @@ using b1.Data;
 using b1.Models;
 using b1.Wrappers;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace b1.ToDo
 {
@@ -12,91 +13,85 @@ namespace b1.ToDo
         private readonly AppDbContext _appDbContext;
         private readonly ICategoryService _categoryService;
         private readonly IMapper _mapper;
-        public TodoService(AppDbContext appDbContext, ICategoryService category, IMapper mapper)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public TodoService(AppDbContext appDbContext, ICategoryService category, IMapper mapper, IHttpContextAccessor httpContextAccessor)
         {
             _appDbContext = appDbContext;
             _categoryService = category;
             _mapper = mapper;
+            _httpContextAccessor = httpContextAccessor;
         }
-        public async Task<TodoItem> AddTodoAsync(TodoItem? item)
+        public async Task<ToDoGetDto?> AddTodoAsync(TodoCreateDto? dto)
         {
-            var CategoryExist = await _categoryService.CategoryExistsAsync(item.CategoryId);
+            var CategoryExist = await _categoryService.CategoryExistsAsync(dto.CategoryId);
             if (!CategoryExist)
             {
-                throw new ArgumentException($"Danh mục với ID {item.CategoryId} không tồn tại.");
+                return null;
             }
+            var item = _mapper.Map<TodoItem>(dto);
+            item.UserID = GetUserID();   
             item.IsCompleted = false;
-            _appDbContext.Add(item);
+            _appDbContext.TodoItems.Add(item);
             await _appDbContext.SaveChangesAsync();
-            return item;
+
+
+            return _mapper.Map<ToDoGetDto>(item);
         }
-        public async Task<TodoItem?> FindById(int Id)
-        {
-            var todoItem = await _appDbContext.TodoItems.FindAsync(Id);
-            if (todoItem == null)
-            {
-                throw new KeyNotFoundException($"Không tìm thấy ToDo với ID {Id}");
-            }
-            return todoItem;
-        }
+       
         //xóa todo
         public async Task<ToDoGetDto> DeleteToDo(int Id)
         {
-            var todo = await FindById(Id);
-            _appDbContext.TodoItems.Remove(todo);
+            var toDoItem= await FindById(Id);
+            if (toDoItem == null)
+            {
+                return null;
+            }
+            _appDbContext.TodoItems.Remove(toDoItem);
             await _appDbContext.SaveChangesAsync();
-            return _mapper.Map<ToDoGetDto>(todo);
+            return _mapper.Map<ToDoGetDto>(toDoItem);
         }
 
         public async Task<List<ToDoGetDto>> GetAllTodosDtoAsync()
         {
-            // Chúng ta truyền cả DbSet vào hàm Map, SQL sẽ chỉ SELECT những cột có trong DTO
-            //return await MapTodoToDto(_appDbContext.TodoItems).ToListAsync();
-            var todos = await _appDbContext.TodoItems.Include(t => t.Category).ToListAsync();
-            return _mapper.Map<List<ToDoGetDto>>(todos);
+            var currentUserId=GetUserID();
+            return await _appDbContext.TodoItems
+                .Where(t => t.UserID == currentUserId)
+                .ProjectTo<ToDoGetDto>(_mapper.ConfigurationProvider)
+                .ToListAsync();
         }
-        //hàm công thức cách mapping từ TodoItem sang ToDoGetDto
-        //private IQueryable<ToDoGetDto> MapTodoToDto(IQueryable<TodoItem> query)
-        //{
-        //    return query.Select(t => new ToDoGetDto
-        //    {
-        //        Id = t.Id,
-        //        Title = t.Title,
-        //        IsCompleted = t.IsCompleted,
-        //        CategoryId = t.CategoryId,
-        //        // Sử dụng toán tử điều kiện để tránh lỗi Null nếu Category chưa được nạp
-        //        CategoryName = t.Category != null ? t.Category.NameCategory : "Không có danh mục"
-        //    });
-        //}
-        //đánh dấu hoàn thành
+        
         public async Task<ToDoGetDto> MarkComple(int Id)
         {
             var todo = await FindById(Id);
             if (todo == null)
             {
-                throw new KeyNotFoundException($"Không tìm thấy ToDo với ID {Id}");
+                return null ;
             }
             todo.IsCompleted = true;
             _appDbContext.TodoItems.Update(todo);
             await _appDbContext.SaveChangesAsync();
-            return await FinByIdDtoAsync(Id);
+            return _mapper.Map<ToDoGetDto>(todo);
         }
         //find by categoryId trả về DTO
         public async Task<List<ToDoGetDto>> GetByCategoryIdDtoAsync(int categoryId)
         {
-            var items = _appDbContext.TodoItems.Where(t => t.CategoryId == categoryId);
-            return _mapper.Map <List<ToDoGetDto>>(items);
+            var currentUserId = GetUserID();
+            return await _appDbContext.TodoItems
+                .Where(t => t.CategoryId == categoryId&& t.UserID==currentUserId)
+                .ProjectTo<ToDoGetDto>(_mapper.ConfigurationProvider)
+                .ToListAsync() ;
         }
 
         //find by id trả về DTO
-        public async Task<ToDoGetDto> FinByIdDtoAsync(int id)
+        public async Task<ToDoGetDto?> FinByIdDtoAsync(int id)
         {
+            var currentUser=GetUserID();
             var item = await _appDbContext.TodoItems
-        .Include(t => t.Category) // Đừng quên Include để lấy tên Category nhé
-        .FirstOrDefaultAsync(t => t.Id == id);
+                .Where (t => t.Id == id&& t.UserID==currentUser)
+                .ProjectTo<ToDoGetDto>(_mapper.ConfigurationProvider)
+                .FirstOrDefaultAsync();
 
-            if (item == null) throw new ArgumentException($"Không tìm thấy ToDo với ID {id}");
-            return _mapper.Map<ToDoGetDto>(item);
+            return item;
         }
 
         
@@ -140,10 +135,24 @@ namespace b1.ToDo
                 .ToListAsync();
             if (!result.Any())
             {
-                throw new Exception($"không có trang {pageNumber}");
+                return null;
             }
 
             return result;
+        }
+
+        //Lay UserId
+        private int GetUserID()
+        {
+            var userID=_httpContextAccessor.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier);
+            return int.Parse(userID ?? "0");
+        }
+        public async Task<TodoItem?> FindById(int Id)
+        {
+            var currentUserId = GetUserID();
+            return await _appDbContext.TodoItems
+                .FirstOrDefaultAsync(t => t.Id == Id && t.UserID == currentUserId);
+
         }
     }
 }

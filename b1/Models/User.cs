@@ -5,5 +5,7 @@
         public int Id { get; set; } 
         public String userName { get; set; } =string.Empty;
         public String PasswordHash { get; set; } =string.Empty;
+        public String UserRole { get; set; } = "User";
+        public virtual ICollection<TodoItem> TodoItems { get; set; } = new List<TodoItem>();
     }
 }

@@ -1,9 +1,11 @@
 ﻿
 
 using b1.Wrappers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace b1.Controllers
 {
+    [Authorize(Roles = "admin")]
     [ApiController]
     public class CategoryController : Controller
     {

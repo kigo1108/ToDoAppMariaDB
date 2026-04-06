@@ -1,12 +1,3 @@
-D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.csproj.AssemblyReference.cache
-D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\rpswa.dswa.cache.json
-D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.GeneratedMSBuildEditorConfig.editorconfig
-D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.AssemblyInfoInputs.cache
-D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.AssemblyInfo.cs
-D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.csproj.CoreCompileInputs.cache
-D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.MvcApplicationPartsAssemblyInfo.cs
-D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.MvcApplicationPartsAssemblyInfo.cache
-D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.sourcelink.json
 D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\appsettings.Development.json
 D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\appsettings.json
 D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\b1.staticwebassets.endpoints.json
@@ -25,7 +16,6 @@ D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\FluentValidation.AspNetCore.d
 D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\Humanizer.dll
 D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
 D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\Microsoft.Build.Locator.dll
 D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
@@ -136,6 +126,15 @@ D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Wor
 D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.csproj.AssemblyReference.cache
+D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\rpswa.dswa.cache.json
+D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.GeneratedMSBuildEditorConfig.editorconfig
+D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.AssemblyInfoInputs.cache
+D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.AssemblyInfo.cs
+D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.csproj.CoreCompileInputs.cache
+D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.MvcApplicationPartsAssemblyInfo.cs
+D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.MvcApplicationPartsAssemblyInfo.cache
+D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.sourcelink.json
 D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\rjimswa.dswa.cache.json
 D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json

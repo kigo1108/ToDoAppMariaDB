@@ -30,14 +30,14 @@ namespace b1.Controllers
         [HttpPost("add-todo")]
         public async Task<ActionResult<TodoItem>> AddTodo(TodoCreateDto dto)
         {
-            //if (dto == null)
-            //{
-            //    return BadRequest("Title cannot be null");
-            //}
-            var item = _mapper.Map<TodoItem>(dto);
-            var CreatedItem = await _itodoService.AddTodoAsync(item);
-            return CreatedAtAction(nameof(GetById), new { id = CreatedItem.Id },
-        ApiResponse<TodoItem>.SuccessResponse(CreatedItem, "Thêm mới thành công"));
+
+            var createdItem = await _itodoService.AddTodoAsync(dto);
+            if (createdItem == null)
+            {
+                return BadRequest(ApiResponse<string>.ErrorResponse(new List<string> { "Không tìm thấy Category" }, "That bai"));
+            }
+            return CreatedAtAction(nameof(GetById), new { id = createdItem.Id },
+        ApiResponse<ToDoGetDto>.SuccessResponse(createdItem, "Thêm mới thành công"));
 
 
         }
@@ -52,6 +52,10 @@ namespace b1.Controllers
             //    .ProjectTo<ToDoGetDto>(_mapper.ConfigurationProvider)
             //    .ToListAsync();
             var data= await _itodoService.GetAllTodosDtoAsync();
+            if (data == null)
+            {
+                return BadRequest(ApiResponse<string>.ErrorResponse(new List<string> { "bạn chưa có công việc nào" }, "Thất Bại"));
+            }
             return Ok(ApiResponse<List<ToDoGetDto>>.SuccessResponse(data, "Lấy danh sách thành công"));
 
         }
@@ -64,7 +68,11 @@ namespace b1.Controllers
         public async Task<IActionResult> UpdateToDo(int Id)
         {
             var da = await _itodoService.MarkComple(Id);
-                
+            if (da == null)
+            {
+                return BadRequest(ApiResponse<string>.ErrorResponse(new List<string> { "không có công việc hoặc bạn ko có quyền đánh dấu" }, "Thất Bại"));
+            }
+
             return Ok(ApiResponse<ToDoGetDto>.SuccessResponse(da, "Sửa đổi thành công"));
 
         }
@@ -77,6 +85,10 @@ namespace b1.Controllers
         public async Task<IActionResult> DeleteToDo(int Id)
         {
             var aa = await _itodoService.DeleteToDo(Id);
+            if (aa == null)
+            {
+                return BadRequest(ApiResponse<string>.ErrorResponse(new List<string> { "Không tìm thấy hoặc bạn không có quyền sửa." }, "Thất Bại"));
+            }
             return Ok(ApiResponse<ToDoGetDto>.SuccessResponse(aa, $"xóa thành công ToDo có {Id}"));
         }
         /// <summary>
@@ -88,6 +100,10 @@ namespace b1.Controllers
         public async Task<IActionResult> GetById(int id)
         {
             var item = await _itodoService.FinByIdDtoAsync(id);
+            if (item == null)
+            {
+                return BadRequest(ApiResponse<string>.ErrorResponse(new List<string> { "Không tìm thấy hoặc bạn không có quyền xem." }, "Thất Bại"));
+            }
             return Ok(ApiResponse<ToDoGetDto>.SuccessResponse(item, $"tìm thấy To do co {id}"));
         }
 
@@ -100,7 +116,7 @@ namespace b1.Controllers
             var items = await _itodoService.GetByCategoryIdDtoAsync(categoryId);
             if (items == null || items.Count == 0)
             {
-                throw new KeyNotFoundException("không tìm thấy to nào trong category này");
+                return BadRequest(ApiResponse<string>.ErrorResponse(new List<string> { "Không tìm thấy các công việc trong category id này của bạn" }, "Thất Bại"));
             }
             return Ok(ApiResponse<List<ToDoGetDto>>.SuccessResponse(items,"tìm thấy các công việc sau"));
         }
@@ -116,6 +132,10 @@ namespace b1.Controllers
             [FromQuery] int size = 10)
         {
             var items = await _itodoService.GetPagedTodosAsync(search, sortBy, isDesc, page, size);
+            if (items == null)
+            {
+                return BadRequest(ApiResponse<string>.ErrorResponse(new List<string> {$"không có dữ liệu ở trang {page}" }, "Thất Bại"));
+            }
             return Ok(ApiResponse<List<ToDoGetDto>>.SuccessResponse(items, $"Page {page}"));
         }
 
