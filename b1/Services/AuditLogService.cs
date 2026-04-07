@@ -4,24 +4,30 @@ namespace b1.Services
 {
     public class AuditLogService
     {
-        private readonly IMongoCollection<AuditLog> _log;
-        public AuditLogService(IConfiguration config)
+        private readonly BackgroundTaskQueue _queue;
+        public AuditLogService(BackgroundTaskQueue queue)
         {
-            var Client = new MongoClient(config.GetConnectionString("MongoConnection"));
-            var Database = Client.GetDatabase("TodoAuđitb");
-            _log = Database.GetCollection<AuditLog>("Logs");
+            _queue = queue;
         }
-        
-        public async Task WriteLog(String action, String detail)
+
+        public async Task WriteLogAsync(String action, string detail)
         {
-            await _log.InsertOneAsync(new AuditLog { Action = action, Details = detail });
+            var log =new AuditLog {Action =action, Details = detail};
+            //đẩy vào hàm đợi và kết thúc
+            await _queue.QueueLogAsync(log);
         }
         public async Task<List<AuditLog>> GetLogsAsync()
         {
-            return await _log.Find(_ => true)
-                              .SortByDescending(l => l.CreatedAt)
-                              .Limit(50) // Lấy 50 bản ghi mới nhất
-                              .ToListAsync();
+            // Kết nối trực tiếp đến MongoDB để lấy dữ liệu (vì đây là thao tác đọc, không cần qua Worker)
+            // Bạn có thể inject IMongoCollection vào constructor hoặc khởi tạo nhanh như sau:
+            var client = new MongoDB.Driver.MongoClient("mongodb://localhost:27017");
+            var database = client.GetDatabase("TodoAuditDb");
+            var collection = database.GetCollection<AuditLog>("UserLogs");
+
+            return await collection.Find(_ => true)
+                                   .SortByDescending(l => l.CreatedAt)
+                                   .Limit(50)
+                                   .ToListAsync();
         }
     }
 }

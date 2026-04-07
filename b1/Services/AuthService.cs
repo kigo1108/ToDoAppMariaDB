@@ -71,7 +71,7 @@ namespace b1.Services
             if(newUser == null || !BCrypt.Net.BCrypt.Verify(user.Password, newUser.PasswordHash)){
                 return null;
             }
-            await _auditLogService.WriteLog("Login", $"Người dùng {user.Username} đã đăng nhập thành công");
+            await _auditLogService.WriteLogAsync("Login", $"Người dùng {user.Username} đã đăng nhập thành công");
             return CreateToken(newUser, _configuration);
 
         }
