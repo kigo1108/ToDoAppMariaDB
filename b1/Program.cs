@@ -52,6 +52,11 @@ namespace b1
                             builder.Configuration.GetSection("AppSettings:Token").Value!))
                     };
                 });
+                builder.Services.AddStackExchangeRedisCache(options =>
+                {
+                    options.Configuration = builder.Configuration.GetConnectionString("RedisConnection");
+                    options.InstanceName = "TodoApp_";
+                });
                 var app = builder.Build();
 
                 // 3. Configure HTTP Request Pipeline

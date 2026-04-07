@@ -158,3 +158,6 @@ D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\MongoDB.Driver.dll
 D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\SharpCompress.dll
 D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\Snappier.dll
 D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\ZstdSharp.dll
+D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\Pipelines.Sockets.Unofficial.dll
+D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\StackExchange.Redis.dll
