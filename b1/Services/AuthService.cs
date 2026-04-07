@@ -11,12 +11,14 @@ namespace b1.Services
     {
         private readonly AppDbContext _appDbContext;
         private readonly IConfiguration _configuration;
+        private readonly AuditLogService _auditLogService;
 
 
-        public AuthService(AppDbContext appDbContext, IConfiguration configuration)
+        public AuthService(AppDbContext appDbContext, IConfiguration configuration, AuditLogService auditLogService)
         {
             _appDbContext = appDbContext;
             _configuration = configuration;
+            _auditLogService = auditLogService;
         }
         //tạo token cho user
         public String CreateToken(User user, IConfiguration configuration)
@@ -69,7 +71,8 @@ namespace b1.Services
             if(newUser == null || !BCrypt.Net.BCrypt.Verify(user.Password, newUser.PasswordHash)){
                 return null;
             }
-           return CreateToken(newUser, _configuration);
+            await _auditLogService.WriteLog("Login", $"Người dùng {user.Username} đã đăng nhập thành công");
+            return CreateToken(newUser, _configuration);
 
         }
     }

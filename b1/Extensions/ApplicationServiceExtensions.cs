@@ -10,6 +10,7 @@ namespace b1.Extensions
             services.AddScoped<ITodoService, TodoService>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddSingleton<AuditLogService>();
             // Cấu hình FluentValidation
             services.AddFluentValidationAutoValidation();
             services.AddValidatorsFromAssemblyContaining<TodoCreateDtoValidator>();

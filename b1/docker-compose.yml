@@ -1,0 +1,35 @@
+services:
+  db:
+    image: mariadb:10.11
+    container_name: b1_mariadb
+    environment:
+      MARIADB_ROOT_PASSWORD: rootpassword123
+      MARIADB_DATABASE: TodoDb
+      MARIADB_USER: nam_admin
+      MARIADB_PASSWORD: adminpassword123
+    ports:
+      - "3307:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    networks:
+      - backend_network
+
+  api:
+    build: .
+    container_name: b1_api
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db;Port=3306;Database=TodoDb;Uid=nam_admin;Pwd=adminpassword123;
+    networks:
+      - backend_network
+
+volumes:
+  mariadb_data:
+
+networks:
+  backend_network:
+    driver: bridge

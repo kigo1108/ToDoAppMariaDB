@@ -265,6 +265,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "b1.Controllers.AuthController",
+    "Method": "GetSystemLog",
+    "RelativePath": "system-logs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "b1.Controllers.ToDoController",
     "Method": "GetallToDo",
     "RelativePath": "todoslist",

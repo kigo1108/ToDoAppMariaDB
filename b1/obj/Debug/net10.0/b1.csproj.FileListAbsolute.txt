@@ -144,7 +144,6 @@ D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\staticwebassets.build.json.ca
 D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\staticwebassets.development.json
 D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\swae.build.ex.cache
-D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.csproj.Up2Date
 D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.dll
 D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\refint\b1.dll
@@ -152,3 +151,10 @@ D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.xml
 D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.pdb
 D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\b1.genruntimeconfig.cache
 D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\ref\b1.dll
+D:\workandlearn\visual_Net\b1\b1\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\DnsClient.dll
+D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\MongoDB.Bson.dll
+D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\MongoDB.Driver.dll
+D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\SharpCompress.dll
+D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\Snappier.dll
+D:\workandlearn\visual_Net\b1\b1\bin\Debug\net10.0\ZstdSharp.dll

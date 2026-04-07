@@ -67,6 +67,19 @@
         }
       }
     },
+    "/system-logs": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "xem log",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Add_Category": {
       "post": {
         "tags": [

@@ -11,11 +11,13 @@ namespace b1.Controllers
         private readonly IAuthService _authService;
         private readonly AppDbContext _appDbContext;
         private readonly IConfiguration _configuration;
-        public AuthController(IAuthService authService, IConfiguration configuration, AppDbContext appDbContext)
+        private readonly AuditLogService _auditLogService;
+        public AuthController(IAuthService authService, IConfiguration configuration, AppDbContext appDbContext, AuditLogService auditLog)
         {
             _authService = authService;
             _configuration = configuration;
             _appDbContext = appDbContext;
+            _auditLogService= auditLog;
         }
         /// <summary>
         /// Đăng kí 1 User mới
@@ -42,6 +44,16 @@ namespace b1.Controllers
                 return BadRequest(ApiResponse<string>.ErrorResponse(new List<string> { "Sai tài khoản hoặc mật khẩu" }, "thất bại"));
             }
             return Ok(ApiResponse<string>.SuccessResponse(token,"đăng nhập thành công"));
+        }
+
+        ///<summary>
+        ///xem log 
+        ///</summary>
+        [HttpGet("system-logs")]
+        public async Task<IActionResult> GetSystemLog()
+        {
+            var logs= await _auditLogService.GetLogsAsync();
+            return Ok(ApiResponse<List<AuditLog>>.SuccessResponse(logs, "xong"));
         }
     }
 }
