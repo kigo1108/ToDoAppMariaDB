@@ -41,6 +41,7 @@ namespace b1
                 builder.Services.AddInfrastructureServices(builder.Configuration);
                 builder.Services.AddSwaggerDocumentation();
                 builder.Services.AddAutoMapper(typeof(MappingProfile));
+                builder.Services.AddcustomCors();
                 builder.Services.AddAuthentication().AddJwtBearer(options =>
                 {
                     options.TokenValidationParameters = new TokenValidationParameters
@@ -68,6 +69,7 @@ namespace b1
                 }
 
                 app.UseHttpsRedirection();
+                app.UseCors("FontendPolicy");
                 app.UseAuthentication();
                 app.UseAuthorization();
                 app.MapControllers();

@@ -1,8 +1,10 @@
 ﻿using b1.Data;
 using BCrypt.Net;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace b1.Services
@@ -62,18 +64,84 @@ namespace b1.Services
             return await _appDbContext.Users.AnyAsync(x => x.userName.ToLower() == user.Username.ToLower());
         }
         //đăng nhập
-        public async Task<string?> Login(UserDto user)
+        //public async Task<string?> Login(UserDto user)
+        //{
+        //    var newUser = await _appDbContext.Users.FirstOrDefaultAsync(
+        //        t => t.userName.ToLower() == user.Username.ToLower());
+
+          
+        //    if(newUser == null || !BCrypt.Net.BCrypt.Verify(user.Password, newUser.PasswordHash)){
+        //        return null;
+        //    }
+        //    await _auditLogService.WriteLogAsync("Login", $"Người dùng {user.Username} đã đăng nhập thành công");
+        //    return CreateToken(newUser, _configuration);
+
+        //}
+        public async Task<TokenResponseDto?> Login(UserDto user)
         {
             var newUser = await _appDbContext.Users.FirstOrDefaultAsync(
                 t => t.userName.ToLower() == user.Username.ToLower());
 
-          
-            if(newUser == null || !BCrypt.Net.BCrypt.Verify(user.Password, newUser.PasswordHash)){
+
+            if (newUser == null || !BCrypt.Net.BCrypt.Verify(user.Password, newUser.PasswordHash))
+            {
                 return null;
             }
-            await _auditLogService.WriteLogAsync("Login", $"Người dùng {user.Username} đã đăng nhập thành công");
-            return CreateToken(newUser, _configuration);
+            var token = CreateToken(newUser, _configuration);
+            var refreshToken = GenerateRefreshToken();
 
+            //luu Refresh Token vao Db
+            newUser.RefreshToken = refreshToken.Token;
+            newUser.Tokencreated = refreshToken.TokenCreated;
+            newUser.TokenExpires = refreshToken.TokenExpires;
+            await _appDbContext.SaveChangesAsync();
+
+            return new TokenResponseDto { Accesstoken = token, RefreshToken = refreshToken.Token };
+        }
+
+        private RefreshToken GenerateRefreshToken()
+        {
+            return new RefreshToken
+            {
+                Token = Convert.ToBase64String(RandomNumberGenerator.GetBytes(64)),
+                TokenExpires = DateTime.Now.AddDays(7),
+                TokenCreated = DateTime.Now
+            };
+        }
+
+        public async Task<TokenResponseDto?> RefreshToken(string Token)
+        {
+            var User = await _appDbContext.Users.FirstOrDefaultAsync(
+                t => t.RefreshToken == Token);
+            if (User == null || User.TokenExpires < DateTime.Now)
+            {
+                return null;
+            }
+            var newAccessToken = CreateToken(User, _configuration);
+            var newRefreshToken = GenerateRefreshToken();
+
+            User.RefreshToken = newRefreshToken.Token;
+            User.Tokencreated = newRefreshToken.TokenCreated;
+            User.TokenExpires = newRefreshToken.TokenExpires;
+
+            await _appDbContext.SaveChangesAsync();
+            return new TokenResponseDto{Accesstoken = newAccessToken, RefreshToken = newRefreshToken.Token};
+
+        }
+        //xóa token khi đăng xuất
+        public async Task<bool> RevokeToken(int Id)
+        {
+            var user= await _appDbContext.Users.FirstOrDefaultAsync(t => t.Id == Id);
+            if (user == null)
+            {
+                return false;
+            }
+            user.RefreshToken=string.Empty;
+            user.Tokencreated = DateTime.MinValue;
+            user.TokenExpires = DateTime.MinValue;
+
+            await _appDbContext.SaveChangesAsync();
+            return true;
         }
     }
 }

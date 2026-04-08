@@ -19,6 +19,16 @@
             xem log 
             </summary>
         </member>
+        <member name="M:b1.Controllers.AuthController.RefreshToken(System.String)">
+            <summary>
+            Refresh Token va lay AccessToken moi
+            </summary>
+        </member>
+        <member name="M:b1.Controllers.AuthController.LogOut">
+            <summary>
+            Đăng Xuất Và xóa Token
+             </summary>
+        </member>
         <member name="M:b1.Controllers.CategoryController.AddCategory(b1.DTOs.CategoryCreateDto)">
             <summary>
             Them danh muc moi vao danh sach cac danh muc
@@ -186,6 +196,18 @@
             <inheritdoc />
         </member>
         <member name="M:b1.Migrations.SyncMissingTables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:b1.Migrations.AddRefreshTokenToUser">
+            <inheritdoc />
+        </member>
+        <member name="M:b1.Migrations.AddRefreshTokenToUser.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:b1.Migrations.AddRefreshTokenToUser.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:b1.Migrations.AddRefreshTokenToUser.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>

@@ -157,6 +157,16 @@
   },
   {
     "ContainingType": "b1.Controllers.AuthController",
+    "Method": "LogOut",
+    "RelativePath": "Log_Out",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "b1.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "Login",
     "HttpMethod": "POST",
@@ -221,6 +231,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "b1.Controllers.AuthController",
+    "Method": "RefreshToken",
+    "RelativePath": "Refresh_Token",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "b1.Controllers.AuthController",

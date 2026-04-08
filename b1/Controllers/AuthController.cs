@@ -1,7 +1,12 @@
-﻿using b1.Data;
+﻿using AutoMapper;
+using b1.Data;
 using b1.Services;
 using b1.Wrappers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson.Serialization.Attributes;
+using Pomelo.EntityFrameworkCore.MySql.Query.Internal;
+using System.Security.Claims;
 
 namespace b1.Controllers
 {
@@ -29,7 +34,7 @@ namespace b1.Controllers
             {
                 throw new Exception("đã có User này trong hệ thống");
             }
-            _authService.CreateUser(user);
+            await _authService.CreateUser(user);
             return Ok(ApiResponse<string>.SuccessResponse(user.Username, "Đăng kí thành công User mới"));
         }
         ///<summary>
@@ -38,12 +43,12 @@ namespace b1.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login(UserDto user)
         {
-            var token = await _authService.Login(user);
-            if (token == null)
+            var result = await _authService.Login(user);
+            if (result == null)
             {
                 return BadRequest(ApiResponse<string>.ErrorResponse(new List<string> { "Sai tài khoản hoặc mật khẩu" }, "thất bại"));
             }
-            return Ok(ApiResponse<string>.SuccessResponse(token,"đăng nhập thành công"));
+            return Ok(ApiResponse<TokenResponseDto>.SuccessResponse(result,"đăng nhập thành công"));
         }
 
         ///<summary>
@@ -55,5 +60,40 @@ namespace b1.Controllers
             var logs= await _auditLogService.GetLogsAsync();
             return Ok(ApiResponse<List<AuditLog>>.SuccessResponse(logs, "xong"));
         }
+
+        ///<summary>
+        ///Refresh Token va lay AccessToken moi
+        ///</summary>
+        [HttpGet("Refresh_Token")]
+        public async Task<IActionResult> RefreshToken(string token)
+        {
+            var newToken= await _authService.RefreshToken(token);
+            if(newToken == null)
+            {
+                return BadRequest(ApiResponse<string>.ErrorResponse(new List<string> { "Token không hợp lệ hoặc đã hết hạn" }, "Vui lòng đăng nhập lại "));
+            }
+            return Ok(ApiResponse<TokenResponseDto>.SuccessResponse(newToken, "đã cập nhật token mới"));
+        }
+
+        ///<summary>
+        ///Đăng Xuất Và xóa Token
+        /// </summary>
+        [Authorize]
+        [HttpPost("Log_Out")]
+        public async Task<IActionResult> LogOut()
+        {
+            var userId=User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null)
+            {
+                return Unauthorized();
+            }
+            var result = await _authService.RevokeToken(int.Parse(userId));
+            if (!result)
+            {
+                return BadRequest(ApiResponse<string>.ErrorResponse(new List<string> { "Không thế đăng xuất" }));
+            }
+            return Ok(ApiResponse<string>.SuccessResponse("đăng xuất thành công", "đã cập nhật token mới"));
+        }
+
     }
 }

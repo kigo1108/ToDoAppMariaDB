@@ -3,20 +3,88 @@
   "WorkspaceRootPath": "D:\\workandlearn\\visual_Net\\b1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\models\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\models\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\dtos\\tokenresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\dtos\\tokenresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71051873-47E5-40CB-8048-006C7A93959A}|b1.Tests\\b1.Tests.csproj|d:\\workandlearn\\visual_net\\b1\\b1.tests\\authservicestest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71051873-47E5-40CB-8048-006C7A93959A}|b1.Tests\\b1.Tests.csproj|solutionrelative:b1.tests\\authservicestest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\services\\auditlogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\services\\auditlogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\models\\errorvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\models\\errorvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workandlearn\\visual_Net\\b1\\b1\\Migrations\\20260408024534_AddRefreshTokenToUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:b1\\Migrations\\20260408024534_AddRefreshTokenToUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\b1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\b1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\extensions\\corsextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\extensions\\corsextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\extensions\\applicationserviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\extensions\\applicationserviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|d:\\workandlearn\\visual_net\\b1\\b1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{82A01BC6-3D01-87D2-6A79-475398493134}|b1\\b1.csproj|solutionrelative:b1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -43,45 +111,6 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Program.cs",
-              "RelativeDocumentMoniker": "b1\\Program.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Program.cs",
-              "RelativeToolTip": "b1\\Program.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAQwDkAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T07:28:15.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\appsettings.json",
-              "RelativeDocumentMoniker": "b1\\appsettings.json",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\appsettings.json",
-              "RelativeToolTip": "b1\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-07T07:27:34.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Services\\CategoryService.cs",
-              "RelativeDocumentMoniker": "b1\\Services\\CategoryService.cs",
-              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Services\\CategoryService.cs*",
-              "RelativeToolTip": "b1\\Services\\CategoryService.cs*",
-              "ViewState": "AgIAACIAAAAAAAAAAAAYwDQAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T07:26:10.014Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
@@ -92,6 +121,261 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "b1\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "b1\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAowFoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T03:08:35.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "b1\\Services\\IAuthService.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Services\\IAuthService.cs",
+              "RelativeToolTip": "b1\\Services\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T03:08:29.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "b1\\Services\\AuthService.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Services\\AuthService.cs",
+              "RelativeToolTip": "b1\\Services\\AuthService.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAAAIUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:24:44.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthServicesTest.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1.Tests\\AuthServicesTest.cs",
+              "RelativeDocumentMoniker": "b1.Tests\\AuthServicesTest.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1.Tests\\AuthServicesTest.cs",
+              "RelativeToolTip": "b1.Tests\\AuthServicesTest.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAgwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:42:55.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RefreshToken.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Models\\RefreshToken.cs",
+              "RelativeDocumentMoniker": "b1\\Models\\RefreshToken.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Models\\RefreshToken.cs",
+              "RelativeToolTip": "b1\\Models\\RefreshToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:50:56.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuditLog.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Models\\AuditLog.cs",
+              "RelativeDocumentMoniker": "b1\\Models\\AuditLog.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Models\\AuditLog.cs",
+              "RelativeToolTip": "b1\\Models\\AuditLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:48:09.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TokenResponseDto.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\DTOs\\TokenResponseDto.cs",
+              "RelativeDocumentMoniker": "b1\\DTOs\\TokenResponseDto.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\DTOs\\TokenResponseDto.cs",
+              "RelativeToolTip": "b1\\DTOs\\TokenResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:27:28.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Program.cs",
+              "RelativeDocumentMoniker": "b1\\Program.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Program.cs",
+              "RelativeToolTip": "b1\\Program.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwCoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T07:28:15.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuditLogService.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Services\\AuditLogService.cs",
+              "RelativeDocumentMoniker": "b1\\Services\\AuditLogService.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Services\\AuditLogService.cs",
+              "RelativeToolTip": "b1\\Services\\AuditLogService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T03:11:09.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "b1\\Models\\Category.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Models\\Category.cs",
+              "RelativeToolTip": "b1\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:48:09.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ErrorVM.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Models\\ErrorVM.cs",
+              "RelativeDocumentMoniker": "b1\\Models\\ErrorVM.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Models\\ErrorVM.cs",
+              "RelativeToolTip": "b1\\Models\\ErrorVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:48:07.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TodoItem.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Models\\TodoItem.cs",
+              "RelativeDocumentMoniker": "b1\\Models\\TodoItem.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Models\\TodoItem.cs",
+              "RelativeToolTip": "b1\\Models\\TodoItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:48:07.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20260408024534_AddRefreshTokenToUser.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Migrations\\20260408024534_AddRefreshTokenToUser.cs",
+              "RelativeDocumentMoniker": "b1\\Migrations\\20260408024534_AddRefreshTokenToUser.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Migrations\\20260408024534_AddRefreshTokenToUser.cs",
+              "RelativeToolTip": "b1\\Migrations\\20260408024534_AddRefreshTokenToUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:45:34.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "b1",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\b1.csproj",
+              "RelativeDocumentMoniker": "b1\\b1.csproj",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\b1.csproj",
+              "RelativeToolTip": "b1\\b1.csproj",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-08T02:43:47.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Models\\User.cs",
+              "RelativeDocumentMoniker": "b1\\Models\\User.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Models\\User.cs",
+              "RelativeToolTip": "b1\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:22:42.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "b1\\DTOs\\UserDto.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "b1\\DTOs\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:27:32.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CorsExtensions.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Extensions\\CorsExtensions.cs",
+              "RelativeDocumentMoniker": "b1\\Extensions\\CorsExtensions.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Extensions\\CorsExtensions.cs",
+              "RelativeToolTip": "b1\\Extensions\\CorsExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:01:07.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ApplicationServiceExtensions.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Extensions\\ApplicationServiceExtensions.cs",
+              "RelativeDocumentMoniker": "b1\\Extensions\\ApplicationServiceExtensions.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Extensions\\ApplicationServiceExtensions.cs",
+              "RelativeToolTip": "b1\\Extensions\\ApplicationServiceExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T02:07:32.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "b1\\Services\\CategoryService.cs",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\Services\\CategoryService.cs",
+              "RelativeToolTip": "b1\\Services\\CategoryService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAmwEAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T07:26:10.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\workandlearn\\visual_Net\\b1\\b1\\appsettings.json",
+              "RelativeDocumentMoniker": "b1\\appsettings.json",
+              "ToolTip": "D:\\workandlearn\\visual_Net\\b1\\b1\\appsettings.json",
+              "RelativeToolTip": "b1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-07T07:27:34.333Z"
             }
           ]
         }

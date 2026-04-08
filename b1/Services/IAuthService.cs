@@ -5,6 +5,8 @@
         public String CreateToken(User user, IConfiguration configuration);
         Task<bool>UserExists(UserDto user);
         Task<UserDto> CreateUser(UserDto user);
-        Task<string?> Login(UserDto user);
+        Task<TokenResponseDto?> Login(UserDto user);
+        Task<TokenResponseDto?> RefreshToken(string token);
+        Task<bool> RevokeToken(int Id);
     }
 }

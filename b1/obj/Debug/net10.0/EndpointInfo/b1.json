@@ -80,6 +80,41 @@
         }
       }
     },
+    "/Refresh_Token": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Refresh Token va lay AccessToken moi",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Log_Out": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Đăng Xuất Và xóa Token",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Add_Category": {
       "post": {
         "tags": [
@@ -744,6 +779,18 @@
           "userRole": {
             "type": "string",
             "nullable": true
+          },
+          "refreshToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "tokencreated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "tokenExpires": {
+            "type": "string",
+            "format": "date-time"
           },
           "todoItems": {
             "type": "array",
