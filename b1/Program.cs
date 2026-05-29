@@ -1,11 +1,13 @@
 
 using b1.Data;
 using b1.Extensions;
+using b1.Hubs;
 using b1.Mappings;
 using b1.Middlewares;
 using b1.Validators.Category;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using System.Text;
@@ -52,6 +54,19 @@ namespace b1
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
                             builder.Configuration.GetSection("AppSettings:Token").Value!))
                     };
+                    options.Events = new JwtBearerEvents
+                    {
+                        OnMessageReceived = context =>
+                        {
+                            var accessToken = context.Request.Query["access_token"];
+                            var path = context.HttpContext.Request.Path;
+                            if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/todoHub"))
+                            {
+                                context.Token = accessToken;
+                            }
+                            return Task.CompletedTask;
+                        }
+                    };
                 });
                 builder.Services.AddStackExchangeRedisCache(options =>
                 {
@@ -67,11 +82,17 @@ namespace b1
                 {
                     app.UseSwaggerDocumentation(); // Gọi Extension rút gọn
                 }
+                
 
                 app.UseHttpsRedirection();
-                app.UseCors("FontendPolicy");
+                app.UseCors(builder => builder
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .SetIsOriginAllowed((host) => true) // Cho phép origin 'null' khi mở file HTML trực tiếp
+                    .AllowCredentials());
                 app.UseAuthentication();
                 app.UseAuthorization();
+                app.MapHub<TodoHub>("/todoHub");
                 app.MapControllers();
 
                 app.Run();

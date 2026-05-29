@@ -23,6 +23,8 @@ namespace b1.Extensions
             services.AddFluentValidationAutoValidation();
             services.AddValidatorsFromAssemblyContaining<TodoCreateDtoValidator>();
             services.AddHttpContextAccessor();
+            // cấu hình signalR
+            services.AddSignalR();
             return services;
         }
     }

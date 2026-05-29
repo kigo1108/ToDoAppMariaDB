@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using b1.Data;
+using b1.Hubs;
 using b1.Models;
 using b1.Wrappers;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
@@ -14,12 +16,14 @@ namespace b1.ToDo
         private readonly ICategoryService _categoryService;
         private readonly IMapper _mapper;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        public TodoService(AppDbContext appDbContext, ICategoryService category, IMapper mapper, IHttpContextAccessor httpContextAccessor)
+        private readonly IHubContext<TodoHub> _hubContext;
+        public TodoService(AppDbContext appDbContext, ICategoryService category, IMapper mapper, IHttpContextAccessor httpContextAccessor,IHubContext<TodoHub> hubContext)
         {
             _appDbContext = appDbContext;
             _categoryService = category;
             _mapper = mapper;
             _httpContextAccessor = httpContextAccessor;
+            _hubContext = hubContext;
         }
         public async Task<ToDoGetDto?> AddTodoAsync(TodoCreateDto? dto)
         {
@@ -33,7 +37,7 @@ namespace b1.ToDo
             item.IsCompleted = false;
             _appDbContext.TodoItems.Add(item);
             await _appDbContext.SaveChangesAsync();
-
+            await _hubContext.Clients.All.SendAsync("ReceiveTodoUpdate", $"Vừa thêm công việc: {item.Title}");   
 
             return _mapper.Map<ToDoGetDto>(item);
         }

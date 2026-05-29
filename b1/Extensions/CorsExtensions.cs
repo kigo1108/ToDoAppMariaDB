@@ -5,9 +5,9 @@ namespace b1.Extensions
     public static class CorsExtensions
     { public static IServiceCollection AddcustomCors (this IServiceCollection services)
         {
-            services.AddCors(opsitons =>
+            services.AddCors(options =>
             {
-                opsitons.AddPolicy("FrontendPolicy", builder =>
+                options.AddPolicy("FontendPolicy", builder =>
                 {
                     builder.WithOrigins("http://localhost:3000")
                     .AllowAnyMethod()
